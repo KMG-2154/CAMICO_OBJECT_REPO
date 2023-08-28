@@ -1,0 +1,1773 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Create_Claim_On_Cyber_Coverage" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_loc" Type="InArgument(x:String)" />
+    <x:Property Name="in_row" Type="InArgument(sd:DataRow)" />
+    <x:Property Name="in_rownumber" Type="InOutArgument(x:Int32)" />
+    <x:Property Name="in_max" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_current" Type="InArgument(x:Int32)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>486,7118</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Security</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Create_Claim_Cyber_Coverage_PL" sap:VirtualizedContainerService.HintSize="496,7053" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="MatterType" />
+      <Variable x:TypeArguments="sd:DataTable" Name="DT_ADV_CALL" />
+      <Variable x:TypeArguments="x:String" Name="ExaminerType" />
+      <Variable x:TypeArguments="x:String" Name="CLMNTFIRSTNAME" />
+      <Variable x:TypeArguments="x:String" Name="CLMNTLASTNAME" />
+      <Variable x:TypeArguments="x:String" Name="CLMNTCOMPNAME" />
+      <Variable x:TypeArguments="x:String" Name="CLMNTEMAIL" />
+      <Variable x:TypeArguments="x:String" Name="CLMNTHOMEPHONE" />
+      <Variable x:TypeArguments="x:String" Name="CLMNTWORKPHONE" />
+      <Variable x:TypeArguments="x:String" Name="CLMNTMOBPHONE" />
+      <Variable x:TypeArguments="x:String" Name="GetClaim" />
+      <Variable x:TypeArguments="x:Boolean" Name="HOME" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder TEST CASE" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="CreateDirectory_1">
+      <ui:CreateDirectory.Path>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">in_loc</CSharpValue>
+        </InArgument>
+      </ui:CreateDirectory.Path>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CreateDirectory>
+    <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder SUCCESS" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="CreateDirectory_2">
+      <ui:CreateDirectory.Path>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">in_loc+"Success\\"</CSharpValue>
+        </InArgument>
+      </ui:CreateDirectory.Path>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CreateDirectory>
+    <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder ERROR" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="CreateDirectory_3">
+      <ui:CreateDirectory.Path>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">in_loc+"Error\\"</CSharpValue>
+        </InArgument>
+      </ui:CreateDirectory.Path>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CreateDirectory>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome: Claim Search" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="41a6e060-e2a8-4cec-a0e2-7d6c87c76291" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,811" sap2010:WorkflowViewState.IdRef="Sequence_18">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Claim'" sap:VirtualizedContainerService.HintSize="438,52" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://camico.sims.imp.uat.oceanwidebridge.com/Sims/(S(f5dyjrq45mhgsrbztmymeczq))/Claims/Lines/PL/SearchClaim.aspx" ContentHash="nadt9Oss_UCJnR-KnHVdNQ" DesignTimeRectangle="1185, 226, 66, 29" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Claim'" FullSelectorArgument="&lt;webctrl aaname='Claim' parentid='toolbar' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Claim' parentid='toolbar' tag='SPAN' type='' class='' check:innerText='CLAIM' /&gt;" Guid="0f1144b0-4955-4449-9f6f-433681543c96" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAAhCAYAAABk391mAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHzSURBVGhD7ZW/SgNBEId9Dhs7K0vBxreQFD6BiH9SmipYB0wjpLSRgKQQJK2V2ig2ImjAwjRahKBEJIRgsvo7mWVus3N3EmHFm+KD2525vZ3vZu9mtssVo0xixRRKNbNYrJu59WMzu3aSa5bLp99iIGVh88iblEesGHSKLyGvWDF6fOJYMb5gnlExAipGQMUIqBgBFSPwa2JaTz0zGo0tzy99U6heRLH6eTs29oEYcrCOFDu769g5XPf6Q7N1cB3LJfDMwfDDVJstbzyNqcVIBWHjNJdFDHJQKHCLkcTgBfA5gvKDisHGshSdlgOJJNMtNkmMr2vwPMSCiaENYyO+OJEmBoV13wZREb5cSczVQ3dinnJv2q92TYr9hKnE8IJ8cSJNDI+Dx857bE1JDMC9vGtovNe8DycGD/V9E1ySxFDRyKE5FMy/WUlieIyvlfWlSUzdMRDDi/KRJAYbx7eA/mYE74IkMbQG8uloIT+oGIDNSUUTSWJwv/tHIxEkPE0MwBoQSvcEF0Nd4xbH/y6SGFcAhwvLIgb7uPzqGD4OKoagN0ZgvNu4jWIonMcAyeRHhkNHDPdmEePyZ8T8N1SMgIoRUDECKkZAxQioGAEVI2DFLBUPvQl5xYpZLe2b+Y2GNymPWDFgZacWdY4KcsQonIr5BG98HMjdAxwFAAAAAElFTkSuQmCC" InformativeScreenshot="6c89155c54ee4607c11faf654ef75a55.png" Reference="-jKMINgrYUS4ZtVTq7DnnA/rK53eAoMTkeThzIpXkCHwA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Claim Search' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,52" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <TryCatch.Try>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Report Date'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Version="V3">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://camico.sims.imp.uat.oceanwidebridge.com/Sims/(S(f5dyjrq45mhgsrbztmymeczq))/Claims/Editor.aspx?form=~%2FClaims%2FControls%2FNewClaim.ascx&amp;helpid=820" ContentHash="6ngQ8IPIWkm_oAZXlTPStg" DesignTimeRectangle="391, 439, 277, 42" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT ctl03_ctl00_wizNe…'" FullSelectorArgument="&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl name='ctl03$ctl00$wizNewClaim$rdpIncidentDate$dateInput' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl name='ctl03$ctl00$wizNewClaim$rdpIncidentDate$dateInput' tag='INPUT' type='text' class='riTextBox riEnabled' aaname='' /&gt;" Guid="4d88360e-f609-495d-97c7-d4d18155abbc" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARkAAAAuCAYAAAAcGG22AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH5SURBVHhe7dsxaxphGMDxfilnx2x+AHHMpKOzQza/Qz6QW2mhtNASoUOhGA6yNGaIfdvn6h0XMOmZ+Ez+fvCA9/rq+Oe9Q98VgEQiA6R6Epnd7nf5uanKxy835f2nr8YY03uiG9GP6EhXG5l4IzbdVnd/X+/2qwD9RDeiH9GRbmjayESBYgPAW0RHoieNNjL/6uMEA7xNdCR60mgjE/dUAKfQ7YnIACcnMkAqkQFSiQyQSmSAVCIDpBIZIJXIAKlEBqhVVVWm02m5vr4uj4+P+9Xn1/sSGThjTUAGg0GZTCZlPB6X2WxWLi4u6rXn1o8JjsjAGVuv12U0GtXhuLy8LJvNpqxWqzIcDtvIHFpfLBZlu93uv+VlIgNnrBuZY0ZkgF4iMvP5vD6p9BUnmqurK5EB/i8is1wu62B0H/BGdA69jucw3c/0ITJwxkQGSHVsMILIAL05yQCpRAZIdWwwgsgAvTnJAKlEBkgVwfBjPCBNc3o59NeBl6Y51fQhMkAqkQFSiQyQSmSAVCIDpBIZIJXIAKlEBkglMkAqkQFSHYzMh8/fym63218BvE50JHrSaCNz8/1Hua3u9lcArxMdiZ402sjcbx/q+sQGJxrgWNGN6Ed0JHrSaCMTft0/1AWKTXFPZYwxfSe6Ef2IjnQ9iQzAqYkMkKiUP2/3JABobpxiAAAAAElFTkSuQmCC" InformativeScreenshot="05b0c3e13856e675bbbd1d65ac03f604.png" IsResponsive="True" Reference="-jKMINgrYUS4ZtVTq7DnnA/HvoX95ppNUG6cNKAUlsdIw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Claim Search' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="400, 414, 86, 25" ElementType="Text" FriendlyName="'Report Date'" FullSelectorArgument="&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl aaname='Report Date' class='requiredAsterisk' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl aaname='Report Date' class='requiredAsterisk' tag='SPAN' type='' check:innerText='Report Date' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFoAAAAdCAYAAAAq9XvWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAILSURBVGhD7ZcxrsIwDIa5HDdg5wjsrByhGyM3YGHiDA8hIYZ3ASQu4Rc7aes4ppSImifhX4pEkzj5/cVNxQxcJnLQRnLQRnLQRnLQRnLQRnLQRnLQRhoH+ryD+WIp2g5Oafjjuh+hOdzTgyLVf2jrI9zSlPG6QrO9pt/j9QLoHOxpW2v0/bodNrB6CrosDIybLzawHwgthGtZgsYqWr1qciLhodeARr1aMHQ4nwYdK6R9Ncs3AGFQYmmOhJPHL6E5pwEU7RfWJC84jnvfYb/u52NTgQ+ALvMQa7JD4N6pceC0Tj+WeQ+qBJ3MsI0iJDYHYxSTnQGRYBGfjOfzRXJJ7SE+1BBovHPZPuiDryXXJp/Sg/RKa+ZFWP0xzBOL4PNTxL5+MwKdGYwxcR0tXsSIg+F6J2gpCVYD/aiPe6qo6GgsTyz2ycPA1iZQguZ9erKUQPtWTAVaWZf25Xk8AU158PlKXN3VQc/cnF6RXCXo/1HRtIe84gbAaqC1Pqnqj2E89b6PnsXX+xY+Vq1kQvKw5HrFvTcB6LjnUMHE52egVW8hd86iGnRnooCFfbGt1rtuLIIO91Y3XkKT8VmFD4CO/lKcVll8nDdRGKRsbtjvEJ75mqkAinjeT2Ob7E/UONBvkHwlv00O2khmoL9dDtpIDtpIDtpIDtpIDtpIDtpIs5/LL3ibvnlFmwjgD8Uuyyk63ujYAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NTypeInto.Target>
+                  <uix:NTypeInto.Text>
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_58">DateTime.Parse(in_row["Report Date"].ToString()).ToString("MM/dd/yyyy")</CSharpValue>
+                    </InArgument>
+                  </uix:NTypeInto.Text>
+                </uix:NTypeInto>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,104" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Policy Number Tab'" sap:VirtualizedContainerService.HintSize="438,52" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://camico.sims.imp.uat.oceanwidebridge.com/Sims/(S(f5dyjrq45mhgsrbztmymeczq))/Claims/Editor.aspx?form=~%2FClaims%2FControls%2FNewClaim.ascx&amp;helpid=820" ContentHash="YNXscnqx2ky2moZpaYilTg" DesignTimeRectangle="923, 440, 36, 41" DesignTimeScaleFactor="1" FriendlyName="'A ctl03_ctl00_wizNewCla…'" FullSelectorArgument="&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl class='picker-icon' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl class='picker-icon' tag='A' type='' aaname='' /&gt;" Guid="afaaefce-ff19-4ff7-b642-866fb53c216b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAtCAYAAADcMyneAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALTSURBVFhH7ZlrSFNhGMcFJS+kXQwKSYIZaZgtTVcoYaSWmtjFYDUSEzIvubHNrGnLS84JFXkpy1TKKLUYNAyiRPpQSvQh+xARXUFybM5bRRc/yb/epxbEzkR4LQ50DvzgvO97ePjxP+9zPpzXCyK/vD5/+Qox8W1qCtPT07/0fggO2l5DDDy1vcHLkfcY+/SRRF2SXs7xDxADI+OTeOe0kyiTZEmKStAFk2RJshRFKciSZCmKVpDB9qQkyIMkyIskyMv/JdjQ1oXOnvswN12m8fmrVrovPlLu9uxsmVNBc0MrrL0DUObk07io5ATq22+ivrXT7dnZMieCB9WlON3SiYpTF1B3rgOKhM00vyU1E4dLK6E7bqY5g7EaQ8N2OEYn3Gp4gkvQMTqJx4PPUFPfTq9Sb6xD+q692JqxG+pj1cgp0EKlqUFFUzdKa5tprarahJGxScF6QnALXrHcxTVrHzSGGsLYZEHzjT40dt3DyZYeVJztQLbGhH15ekpYFhYGu3NcsJ4QnIITlNzF67dRfLSK9twhjQHZeRpErFlHibEkXfMHCnXw8fGBzTEqWE8ILkGWRJYqF/GJycjIUiEuPhFR0XGI3RCPhwOPoFTtx7KQUMhWhmNpyHIsXLQYwcFL/t0eZOgNldQYff1PYLnzAGcudaPEYKS1QrUW5bWNuNXbT2uso5NTtrnVmAluwfSdSmjLTCRYoCtHbpEemXuUtJaUkkodzATztWUo1BsRGLTArcZMcAsmpe34LeiSkMcoqFMjIqOoMVyCbC/6+fkL1vEEt+CmpJ8psQ80E2DNIo/diLdDw0hJ206CrMtda6xJhOp4gluQfYBjFAnUHOGRaxG2ajVCV8jw/MUryKPXY35gEPwDAjDP1xfe3t6EUB1PcAv+bSRBXiRBXiRBXiRBXiRBXiRBXiRBHkT/C1i0P9E9HkOw9y0GPB7ksIGY+PMoDPgO/WOvH4ScTH0AAAAASUVORK5CYII=" InformativeScreenshot="d3fda9700bda355d59c9178a0f9f0f6d.png" Reference="-jKMINgrYUS4ZtVTq7DnnA/PTEESSFfHU2dxS5jVYwo9A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Claim Search' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Policy Number'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://camico.sims.imp.uat.oceanwidebridge.com/Sims/(S(f5dyjrq45mhgsrbztmymeczq))/claims/controls/PolicySelectWithVerification.aspx?helpid=770&amp;calledfrom=newclaim.ascx&amp;LossDate=06/26/2023&amp;rwndrnd=0.7081192080363421" ContentHash="omUYnySHz0GYplvLLFcG3w" DesignTimeRectangle="201, 227, 228, 42" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT tbPolicyNumber'" FullSelectorArgument="&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl name='rwPolicyPicker' tag='IFRAME' /&gt;&lt;webctrl id='tbPolicyNumber' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl name='rwPolicyPicker' tag='IFRAME' /&gt;&lt;webctrl id='tbPolicyNumber' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="c615e33c-db2d-4dd9-ac22-520cf8dfb788" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOgAAAAuCAYAAAAiGFXRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFbSURBVHhe7d0xTsNAAERR7n83RB0ogSZpHBGSyiwaSzFCQEk8xXvSNN5tv+zOdwOotQY6z/M4Xy7j7fRuZhstDabFqyXQPMjh4TiN3f55PLw+jfuXRzO70dJc2kuDafEa6RJoqs1BLu1P05g/vgoG/l+aS3tpMC2myVgCTbGpNxeA7aTBtJgmYw005XpzwrbSYFr8EWi+g4HtpUWBQimBQjGBQjGBQjGBQjGBQjGBQjGBQjGBQjGBQjGBQjGBQjGBQjGBQjGBQjGBQjGBQjGBQjGBQjGBQjGBQjGBQjGBQjGBQjGBQjGBQjGBQjGBQjGBQjGBQjGBQjGBQjGBQrFfA/ULfNjen7/A3+2fx/40LQ+BbaTBtPgt0PPlMg7HaSk3F7xJ4bbSXNpLg2kxTcYS6DzPS7E5SL25lO9gM7vN0lzaS4NpMU2ugUYepNocmtk2S4PXOGMNFGgzxidYNvCVuZ1s+gAAAABJRU5ErkJggg==" InformativeScreenshot="5648ab8718838948358ad41c875aad6b.png" IsResponsive="True" Reference="-jKMINgrYUS4ZtVTq7DnnA/Ii8CRxeTpU6Vd3aK81BhJg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Claim Search' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="206, 203, 96, 17" ElementType="Text" FriendlyName="'Policy Number'" FullSelectorArgument="&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl name='rwPolicyPicker' tag='IFRAME' /&gt;&lt;webctrl id='capPolicyNumber' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl name='rwPolicyPicker' tag='IFRAME' /&gt;&lt;webctrl id='capPolicyNumber' tag='SPAN' type='' class='' aaname='Policy Number' check:innerText='Policy Number' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGQAAAAVCAYAAACwnEswAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAISSURBVGhD7Za7bQMxDIazXDZI7xHcu/UI1115G7hx5R0MN17hgFuCoV53JEVJ51ci2PoBA5ElUeT/iXK+oKkqNSCVqQGpTA1IZWpAKlMDUpkYkHO/ge8f8emvfnaNJjjsNtBd/BCu0N0cY41c3O1x8mMqM7eHgzb1DE0n2L4wfgyEmecMXm+oADKhOTjWjXtEHrRqzFsDQV0GLHyAsx/mJTvkVXKmd/1eye3TgNiEzO30H6WjFiAaoHC76f5EJyYvQzBd2yeAKDFYnbYenLfrXE4m3/FoYLsxix+AXKgP2qUIc+KFiM7jcAtAfGCWfGz4sqcExMVjCWJhNqFQ6Dwl91JR02VMOodaBSQz9vHnPML87gSj/8rGm8cyH1FHFJ+r+KNOzbO3RgZiBReAKOZQmfPn87JrNdPDOfcAoRdBAPA1zHlF61H0O3MegWVlvkuex1V+sojUeXZAHogFKpOlIuYxOJGE6Sj3xJi9/wuEPXX0E+p+JpBXd0hYv+0HTDq3LgZiZPPf7XnBfwGEnmH+zl26ZwJxweJklz0FIL5YevPPaD4z3haX6w4jHUiIz34oE4Y/BiTngdxvNMGYzIfrNiBGPqG5Fdn6EhBUtB+BsORTZlNl1igF82dkgAPt9Gj9GiAD/stNaog6wsVYzsSuPabO42JAapD6LH6Q6gJin6tSd7y3quuQT1cDUpkakKoE8AsdCdFTdbBc5QAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_59">in_row["Policy Number"].ToString()</CSharpValue>
+                </InArgument>
+              </uix:NTypeInto.Text>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://camico.sims.imp.uat.oceanwidebridge.com/Sims/(S(f5dyjrq45mhgsrbztmymeczq))/claims/controls/PolicySelectWithVerification.aspx?helpid=770&amp;calledfrom=newclaim.ascx&amp;LossDate=06/26/2023&amp;rwndrnd=0.7081192080363421" ContentHash="VfXLxQbgRUK22iMplkFCag" DesignTimeRectangle="1071, 318, 95, 38" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl name='rwPolicyPicker' tag='IFRAME' /&gt;&lt;webctrl id='btnOK' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl name='rwPolicyPicker' tag='IFRAME' /&gt;&lt;webctrl id='btnOK' tag='INPUT' type='button' class='button button-lg round-rect color-bg' aaname='Search' check:text='Search' /&gt;" Guid="e1da1a07-84a2-45ef-8cd9-1bcec7969af2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGMAAAAqCAYAAACnbOUxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJWSURBVHhe7ZuxSgRBEET9EEP/ydzMRL/BLzA0NDQxEu4P1EQxEEQEA000EBE0EBQZKb1a+tqe3T317nqhCgq8mZ7Znnq7a7RLRUojwUikCRjnN09lbeekrGyMyvL6gTwjI1/kjLytGhiYEIT5GnlbIA0MkIoWyLM1cqcaGHoqFmPkTjUwokJ5PqYEI4EpwUhgSjASmBKMBKYEI4EpwUhgSjASmBKMBKYEI4Gpf4WxuXtWXl7fxzt+a+/otpnfHl2Vt/eP8cyksA7r7X52zf3Ta1ndPv4xH10Tqu0HR33gN8Z9zeHlw8RaGufya35r6t9gRM37hrsOGPnq7vmrv9rBCQN1HAM0wIvWcD/fA35DvHm6ek0NA0233Y3wtDAY9On141e4NnBf4+c4bq/lA2/z4GF0NTctDNQRsP3b1vSFUauredAw2DxUe79PA4OvGobnw6WjkLkW45jHGK/d56mABw0DZjBW9vAWmFUED+sgux6B+9rompCvi/Zrc61Xq9QwrBmSbZgH7PNkRMFHgfonA3v7GpjXnhbGYJ8Mbx9AXxisq8m+kjwMGH9jDHNtdW0WjLEx78O0czaEKORa8H5tm7t6TQsj+ofJMfuq6QOj6w7mPPeo1SMsyF6LPflxGOuhvjdOahhb+xfNQSkfEA8YiSCxpuuQtqYNHgP2gRKUlb1p4MHCkP9mSjASmBKMBKYEI4EpwUhgSjASmBKMBKYEI4EpwUhgqoGhTwIW4/CTAH0ssxiHH8voM7L5G3mHn5FBmAApQZmtkS9ytiCgCRjSYiUYaVTKJ2WKrnyR2hj2AAAAAElFTkSuQmCC" InformativeScreenshot="0f3aa87ffe04aa9289218d07b1bc6fbd.png" Reference="-jKMINgrYUS4ZtVTq7DnnA/A9mFNq0q20yvPW2oRkDO3Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Claim Search' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Claim Search" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="0b33d445-280c-4a5d-a228-4c60e2a6f029" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Jurisdiction'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://camico.sims.imp.uat.oceanwidebridge.com/Sims/(S(f5dyjrq45mhgsrbztmymeczq))/Claims/Editor.aspx?form=~%2FClaims%2FControls%2FNewClaim.ascx&amp;helpid=820" ContentHash="D4PatyWpHEOO7EWbqEBukQ" DesignTimeRectangle="99, 439, 277, 42" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'California'" FullSelectorArgument="&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl name='ctl03$ctl00$wizNewClaim$cboJurisdiction' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl name='ctl03$ctl00$wizNewClaim$cboJurisdiction' tag='INPUT' type='text' class='rcbInput radPreventDecorate' aaname='' /&gt;" Guid="8be8188b-af3b-4d87-b1ed-decaa7e8be41" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARkAAAAuCAYAAAAcGG22AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANASURBVHhe7dgxTuNAFIDhvRw3oN9+G7otqFbiCHSU3ICGijNsQFqlWERBgZCCkGhANNZs3sy8YWyPsyaZlyDn/6Qp4tgegzR/bH9zAGCIyAAw1YrM69u7u7t/cNfzW/f7z18Gg8EYPaQb0g/pSC5FRr6QnZ6eX1zTNHErAIwj3ZB+SEfy0KTISIFkBwDYhHREeqJSZKQ+3MEA2JR0RHqiUmTkmQoAash7QmQAVEdkAJgiMgBMERkApogMAFNEBoApIgPAFJEBYIrIADBFZACY2lpkZmff3cFhexxdLuK3n3Bz7o89vYmfRWmbWFy5I53vbB43blGcf62/E5gI+8hkCz2PwOPlSVj8h+duFreNUghKOlceEp13F3FR8VoPjq/cY9wE7BvbyOhCr7nIhu5auvx+J+6Cmwhgp0wjEx6RKi/0kZEJdzefvEsC9tCPn7/8WGXMPkMMIzN3p+s8rugjho7u8aXItLYt3MVxdnwc7fci8drS6IfwI1LZvnpH5ueT7zpzda916J1M9gjZOi+wI6sisklghF1khhbYCvpuJR0T49E6x38jE4RzFe6iCo9w+lK6f7xsL5wjzidj5bWW/gd6rAZJr2eX746ApVJMNg2M+FKRKfEByH/pN4xM73xevCPJtmtkWvOo0jUs9c498n8Q5uLRDruXR6VGYMSeRSY8+pSuqbv/UKQ8IoMJ07jUCIywi8y672R670s6C9coMuEc24pM6b0RkcHXUSswwjAycdENLdSCsLCXx2QLdXJ3MvHYPCphLiKDaTKNjC6y1sLLLeZultZf+HXvBqBuZArn84beydSPjN+nc3dHZDBltpER6Ze7vWD9YvPbdXHpI8THYkv7VIxMKXw6z6jjxaaRyc4b5pFtRAbTZB8Zr/QOor9IUwDy72VB14yM133v09/PKjLduf13fj8ig2naUmQA7CsiA8AUkQFgisgAMEVkAJgiMgBMERkApogMAFNEBoApIgPAVDEy1/Nb1zRN/AQA65GOSE9Uiszd/YN7en6JnwBgPdIR6YlKkXl9e/f1kR24owHwWdIN6Yd0RHqiUmSEfCEFkp3kmYrBYDDGDumG9CMPjGhFBgBqIzIADDn3D3oK3grwd1HAAAAAAElFTkSuQmCC" InformativeScreenshot="d6ff6e02a32be6fbecc35b5a487ae7d4.png" IsResponsive="True" Reference="-jKMINgrYUS4ZtVTq7DnnA/xuJRibxjfUSeygEReHhnjw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Claim Search' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="108, 414, 83, 25" ElementType="Text" FriendlyName="'Jurisdiction'" FullSelectorArgument="&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl class='requiredAsterisk' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl class='requiredAsterisk' tag='SPAN' type='' aaname='Jurisdiction' check:innerText='Jurisdiction' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFcAAAAdCAYAAADfC/BmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHeSURBVGhD7ZY7bsMwDEBzudwge4/gPWuO4M2jb5DFU87QwECRoRcw4Euo1NcSqdqRbSYtwAd4UCSR1DPl9qAENkQuIyKXEZHLiMhlROQyInIZEbmMFMp9qPr0oereDVdj4xybhxuXgGoYb6qCcdWN7ocFYH2N1g7dRR1PF3V9MsSzvEfuCHHOBUIS8nKfrUmLxHmt3Fbd3Xgv3tS5W9hWw71Z+1LL2Sa3b8kb18VP112vh+vW2+46hr2jukLnxoLMPrcmG9PPNS2S63LEvlw3+z1Wps0Z4oTfAX2O800NdmSw3TytjWs1c3DGtC76iXuBXBijwolcEgcKd3Pkypq1M3Izn4mhu4X9uj7SuUguyYlievEhxy+fppfIxUnzcnN/UGiH05ipXHNw8jInluXmcqbnojnsHhz3b8jVxFd5dv+83DQ/ZVluvuZYKI9cIyDqsD3lBuJCy+X+284lQbFsd/BiufCv2T3ESOfMoaKcpoYZufT7B/Gaaf+yXJ9j4Zu7i9z4uqIu1fjD+vmrHhfKHeBwUw54kmtt1/q5qnukLwbL1ZgbFe0BueHlxXM+D5KrSc+VnmE/ucJqRC4jIpcRkcuIyGVE5DIichkRuYyIXEYOn1/fSh6eRzqXDaV+AEgGoegQHSbzAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFISURBVDhPjZM9SwNBEEAPUvgLbK2F1ILgD7DyVwhebW8TsEptYRNRCGgjIlporYVFtPEjxE7UEDAoJniE42C8N+7qfcwFHywhm8ybnZndQP7B+d1Q9ts78vpwIVHsNh1TBf2PSJY3znRddm5kdLQqSTxxv/5QKSBrUG/KYrjndkRGzVmVZDEF170XDZ5Zabkd0cwqSFeSJG63QsCREWyd3rudVNDvSHetpoIspmAuPFQBPfDEuwsqoJFZcgKONv6aaOZg6UT7QGayEjy4aueODzkBwdRP4Prmttw25jWYT2uEYJbweNz4zcr8p1EWjJ81mJo5hS+lipLA10y9UA8PtKFPg0/9XqQsYN7cuFQE/kIx2mIDwRTQMC8gMxeKFUV/Y/WYTeSPft5k5QSUUnwHYArgffimY9M7kQoYr0WlAAjmMfESbUS+Ab6vnfTf3/xkAAAAAElFTkSuQmCC" InformativeScreenshot="b75dc7ae6692bf67dd9c88fcd513a896.jpg" Selector="&lt;html app='chrome.exe' title='Claim Search' /&gt;" Url="https://camico.sims.imp.uat.oceanwidebridge.com/sims/(S(png0gkomt2aye3hciuoy2eev))/Claims/Lines/PL/SearchClaim.aspx" />
+              </uix:NApplicationCard.TargetApp>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NApplicationCard>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Jurisdiction'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NTypeInto_3" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://camico.sims.imp.uat.oceanwidebridge.com/Sims/(S(f5dyjrq45mhgsrbztmymeczq))/Claims/Editor.aspx?form=~%2FClaims%2FControls%2FNewClaim.ascx&amp;helpid=820" ContentHash="D4PatyWpHEOO7EWbqEBukQ" DesignTimeRectangle="99, 439, 277, 42" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'California'" FullSelectorArgument="&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl name='ctl03$ctl00$wizNewClaim$cboJurisdiction' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl name='ctl03$ctl00$wizNewClaim$cboJurisdiction' tag='INPUT' type='text' class='rcbInput radPreventDecorate' aaname='' /&gt;" Guid="8be8188b-af3b-4d87-b1ed-decaa7e8be41" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARkAAAAuCAYAAAAcGG22AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANASURBVHhe7dgxTuNAFIDhvRw3oN9+G7otqFbiCHSU3ICGijNsQFqlWERBgZCCkGhANNZs3sy8YWyPsyaZlyDn/6Qp4tgegzR/bH9zAGCIyAAw1YrM69u7u7t/cNfzW/f7z18Gg8EYPaQb0g/pSC5FRr6QnZ6eX1zTNHErAIwj3ZB+SEfy0KTISIFkBwDYhHREeqJSZKQ+3MEA2JR0RHqiUmTkmQoAash7QmQAVEdkAJgiMgBMERkApogMAFNEBoApIgPAFJEBYIrIADBFZACY2lpkZmff3cFhexxdLuK3n3Bz7o89vYmfRWmbWFy5I53vbB43blGcf62/E5gI+8hkCz2PwOPlSVj8h+duFreNUghKOlceEp13F3FR8VoPjq/cY9wE7BvbyOhCr7nIhu5auvx+J+6Cmwhgp0wjEx6RKi/0kZEJdzefvEsC9tCPn7/8WGXMPkMMIzN3p+s8rugjho7u8aXItLYt3MVxdnwc7fci8drS6IfwI1LZvnpH5ueT7zpzda916J1M9gjZOi+wI6sisklghF1khhbYCvpuJR0T49E6x38jE4RzFe6iCo9w+lK6f7xsL5wjzidj5bWW/gd6rAZJr2eX746ApVJMNg2M+FKRKfEByH/pN4xM73xevCPJtmtkWvOo0jUs9c498n8Q5uLRDruXR6VGYMSeRSY8+pSuqbv/UKQ8IoMJ07jUCIywi8y672R670s6C9coMuEc24pM6b0RkcHXUSswwjAycdENLdSCsLCXx2QLdXJ3MvHYPCphLiKDaTKNjC6y1sLLLeZultZf+HXvBqBuZArn84beydSPjN+nc3dHZDBltpER6Ze7vWD9YvPbdXHpI8THYkv7VIxMKXw6z6jjxaaRyc4b5pFtRAbTZB8Zr/QOor9IUwDy72VB14yM133v09/PKjLduf13fj8ig2naUmQA7CsiA8AUkQFgisgAMEVkAJgiMgBMERkApogMAFNEBoApIgPAVDEy1/Nb1zRN/AQA65GOSE9Uiszd/YN7en6JnwBgPdIR6YlKkXl9e/f1kR24owHwWdIN6Yd0RHqiUmSEfCEFkp3kmYrBYDDGDumG9CMPjGhFBgBqIzIADDn3D3oK3grwd1HAAAAAAElFTkSuQmCC" InformativeScreenshot="d6ff6e02a32be6fbecc35b5a487ae7d4.png" IsResponsive="True" Reference="-jKMINgrYUS4ZtVTq7DnnA/xuJRibxjfUSeygEReHhnjw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Claim Search' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="108, 414, 83, 25" ElementType="Text" FriendlyName="'Jurisdiction'" FullSelectorArgument="&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl class='requiredAsterisk' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl class='requiredAsterisk' tag='SPAN' type='' aaname='Jurisdiction' check:innerText='Jurisdiction' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFcAAAAdCAYAAADfC/BmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHeSURBVGhD7ZY7bsMwDEBzudwge4/gPWuO4M2jb5DFU87QwECRoRcw4Euo1NcSqdqRbSYtwAd4UCSR1DPl9qAENkQuIyKXEZHLiMhlROQyInIZEbmMFMp9qPr0oereDVdj4xybhxuXgGoYb6qCcdWN7ocFYH2N1g7dRR1PF3V9MsSzvEfuCHHOBUIS8nKfrUmLxHmt3Fbd3Xgv3tS5W9hWw71Z+1LL2Sa3b8kb18VP112vh+vW2+46hr2jukLnxoLMPrcmG9PPNS2S63LEvlw3+z1Wps0Z4oTfAX2O800NdmSw3TytjWs1c3DGtC76iXuBXBijwolcEgcKd3Pkypq1M3Izn4mhu4X9uj7SuUguyYlievEhxy+fppfIxUnzcnN/UGiH05ipXHNw8jInluXmcqbnojnsHhz3b8jVxFd5dv+83DQ/ZVluvuZYKI9cIyDqsD3lBuJCy+X+284lQbFsd/BiufCv2T3ESOfMoaKcpoYZufT7B/Gaaf+yXJ9j4Zu7i9z4uqIu1fjD+vmrHhfKHeBwUw54kmtt1/q5qnukLwbL1ZgbFe0BueHlxXM+D5KrSc+VnmE/ucJqRC4jIpcRkcuIyGVE5DIichkRuYyIXEYOn1/fSh6eRzqXDaV+AEgGoegQHSbzAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60">in_row["Jurisdiction"].ToString()</CSharpValue>
+                </InArgument>
+              </uix:NTypeInto.Text>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Screenshot.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Screenshot.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="in_fileName">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_61">in_loc+"Success\\"+in_row["Test Scenario ID"].ToString()+DateTime.Now.ToString("MMddyyyyHHmmss")+".png"</CSharpValue>
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InvokeWorkflowFile>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="CI6A-TChCESvW-xqJFwudg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAbxSURBVFhHpZZtTFvnFcf9pWuypg3tmjVrGmLeEoMBG2PaJBDb2CkvyQJpvlXtFqRpmrSXT5s67a3pl0nTptXkhdAklEsCbZdG3VsrVe3AhhBCs3ZDi5ZAo21OA5hAOztNmrXhXj9n//M8j415SUe7I/30P+fh+vzPufcasC03YgF3zkzQ0zITrDLAyPshb3ImVEXTQS/NBDn3RmeClcZ0qHIvX6s/9v/HVIPbfjVU1com2kxcra2k6VovqBQM14sIVBpTAbddt/nsoTb2htlUGgWUWcYQ9dWAR0wFOPcgV8r1VMCj8AOfZ59uufzgyWES00a6sUfm8ww0cTZiuPZViLi/Qp1xrohNbV7m3ZiurXChUSzbIIO/QjDKUBlpE4r73BmdhE5ucys4V/X/HoI3h1EsvYFSjTaa9Kmm8W3aSDXPMJGmxkWTNS4BBaoer3ZhCMfSQ/Azh1FMGWU1z5ipxnIA1hq3kDUbaENlJHMxLmul49XljFDqii35LZnwucMZE4XI3khvo41Uzg1lzc1l7aIrOGO0KV3ZupAycWVLWVjbqnC/tNve/h3/nAmboqk2I7mNNpn57jfoxss9ZMYnKR3i5rskZl4la2QXWecqGcGaYn3LQ5JzHpx5BM5kTcNZ70PlS3uMbUYzjYUq1Fb6dknFxDKvr6YbJ3u0JVE8Kah/bBaYdGkqpU8xzNSLZL3jJ/OtChgxbgzhxjDQYbeqoajVXXAbu3M8LzxGzL4fBjO3io1Z39tSRuN1W+nWpTFp8JeYSd8yPqKqZ65R1T4N8qbwdYqOzsprxM0xst6ugZmLDZUOc85aDi3HEOVJGsG74H5hd4u7ZzdVANb+Jq80ZfCsBOv133TLxkein5AXhhmezso1R3ENh4h3K7PhMk1pljJOMXumpMXm7m42ALm6m4S7p1k8+Ys6ury5lN7b7BTMxGP1siFvV/l0UuLROse1eefv4C5xpC7sFdZZJ5lnS8hagtRwiWFzdTdHXScwwIkmTTO9useLIZwUe8RJN177nWy289kPqeJnyTlglNF0rutvdt6QnxFTJ4R5thhm2TgwlINS0NRQ8Yit/HhTsvz4LkpT1rWLth9spL/7yij2cIm4dWmUxuIWudF8MYnbkKTJJF7MTyZguBGGmiEJMSZInS1K2MqMr8JUImSu659/u5piVcWCN4lcnCXXTxNLA7P5dYLKoRH9QlpDRWSeKSSLQW4NaZV1gbCVdu6kUpiWGjuF1C6lj7Q30vkap2zSd/EWlaHpQtgoW7PP+zA0h3WmAEb5wjoDhgowTD7O5uABks7OHUKxk6BAqvjeUz5hxidoMpGi0p/8+zMxiscmProAkzwyB/Ogdgxhl7XKN3CdsJU8v+OvJR2NpNhBqGXuZH2+UQz2n5SbtHRcJycaO38MWD+Ful9dk59JTZ+CGRvlCnMwlyzJBrBecG4Oro/aHB0NRvGxRpqjQQ7gONYgOP/6a0/JZn/+1yyVwLwYKP1A5nP13HkvHhmH9fYWMk+vBw/B9CHBqnOyWE+vM2yOow0tIGPIyPpovQCsdPy8+ioe6rtJjh99QA6YSF0Izg/1/kdee228E4brYLYO2z6I/EGYK6y0Dqzba7MbgZziI/XJTUfqKRsH69E6wXi79ojR9/8hG//pwi0K/jJJm2CYzdeOfUjn/qlevInEu5QYLCFz4CuatTBdK9JqnX5A5hTNUX+WNz1X37rpuTraqJH5kTqRroHwGntE1/nfSgOOi5OWHIaZwEuaDr6m849bsN1aGD+QwWLt/7JUa2CNsPrXGNKcw9HeYN/Y/igxRVrTeRaisH27CPQ8Sa+MvkEX9R3hGL9+lYy/vUJP/P4H5O/wwWiNYkBr//0ytwbuFzIH2H7+f0ZFbaHWosPbKU1hG+ujxKaFhyWkNCT4ZxldwKk/FMHkS8pU6n3YVipZyFlTA/ct/k/ZHg7kFBwOxQraVOOCQyEqBKx8JpXP2ubX2Tze9TDM7hVm9F4YAlaAM605wormxLTl4sAQ9oK2YCzdMP9gkApA/qGgkHCu66XOL7+JZxxdjQHuAathuBqGUNSa2KJbvzB4iPwDtTHZ9EAt5R2sFQznafJY8XNWmR8I0ve7y8mM3I1N71EKrOgqmK4SnM9G7ob5ik83TwcPkbe/NgbIfiAg8vYHpMochvb9Kk9T076VLr+B5xxZxabQu+ZhRe6Kfbxc8+zAIM/YW2F+W/wYxi86Xs4ns28ljL4oMSMrBNdmBPStDGe+758n+G7khv3GhrCfNrT6Re6zPsF5btgn6+q2zTBZobmTzF4QuTNp9q5s/fj1z7H17QKD5Kz/9bYWDNCFAaLQJKCTp/A7PXJHItX7hZFU7wpjtu+OluVvbLP9F5lmWAkTeM7rAAAAAElFTkSuQmCC" InformativeScreenshot="946e8ab914cbc40df31a8141fb82c7ea.jpg" Reference="-jKMINgrYUS4ZtVTq7DnnA/QTU5IL-6rUiCZAu6k9ZXXQ" Selector="&lt;html app='chrome.exe' title='Claim Search' /&gt;" Title="Claim Search" Url="https://camico.sims.imp.uat.oceanwidebridge.com/Sims/(S(f5dyjrq45mhgsrbztmymeczq))/Claims/Lines/PL/SearchClaim.aspx" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="5000" DisplayName="Click SELECT" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c4be971e-8ffb-4f8b-89c5-b8bb55ce9b91" InformativeScreenshot="7616708c4db549d0a8a5a3fa73fd651c" Selector="&lt;html app='chrome.exe' title='Claim Search' /&gt;&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl name='rwPolicyPicker' tag='IFRAME' /&gt;&lt;webctrl id='rgPolicy_ctl00' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' aaname='Select' /&gt;" TimeoutMS="75000">
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Screenshot.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Screenshot.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_fileName">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">in_loc+"Success\\"+in_row["Test Scenario ID"].ToString()+DateTime.Now.ToString("MMddyyyyHHmmss")+".png"</CSharpValue>
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click NEXT PAGE 2" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c4be971e-8ffb-4f8b-89c5-b8bb55ce9b91" InformativeScreenshot="841a41f7b5bc0cd86e9e6e486c40c7a5" Selector="&lt;html app='chrome.exe' title='Claim Search' /&gt;&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='button' aaname='Next' /&gt;" TimeoutMS="75000" WaitForReady="COMPLETE" />
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DeselectAfter="True" DisplayName="Type Into CLAIMANT FIRST NAME" EmptyField="True" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="TypeInto_4">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="af2f4a50-5d50-495d-8753-624a2b4e52f2" InformativeScreenshot="4dff9ca939cd0fc91d24f08a5d295af9" Selector="&lt;html app='chrome.exe' title='Claim Search' /&gt;&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl visibleinnertext='Claimant First Name' idx='1' /&gt;&lt;webctrl name='ctl03$ctl00$wizNewClaim$txtEmployeeFirstName' tag='INPUT' type='text' /&gt;" TimeoutMS="75000">
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:TypeInto.Target>
+      <ui:TypeInto.Text>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">in_row["Claimant First Name"].ToString()</CSharpValue>
+        </InArgument>
+      </ui:TypeInto.Text>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:TypeInto>
+    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into CLAIMANT LAST NAME " EmptyField="True" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="TypeInto_5">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="af2f4a50-5d50-495d-8753-624a2b4e52f2" InformativeScreenshot="1b3b8dc38b51e28ca000d8a744fe41ae" Selector="&lt;html app='chrome.exe' title='Claim Search' /&gt;&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' visibleinnertext='Claimant Last Name' /&gt;&lt;webctrl name='ctl03$ctl00$wizNewClaim$txtEmployeeLastName' tag='INPUT' type='text' /&gt;" TimeoutMS="75000">
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:TypeInto.Target>
+      <ui:TypeInto.Text>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">in_row["Claimant Last Name"].ToString()</CSharpValue>
+        </InArgument>
+      </ui:TypeInto.Text>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:TypeInto>
+    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into CLAIMANT COMPANY NAME" EmptyField="True" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="TypeInto_6">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="af2f4a50-5d50-495d-8753-624a2b4e52f2" InformativeScreenshot="57338c25b72816b4ee43a0bed7eddbd6" Selector="&lt;html app='chrome.exe' title='Claim Search' /&gt;&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl visibleinnertext='* Claimant Company Name' idx='2' /&gt;&lt;webctrl name='*CompanyName' tag='INPUT' type='text' /&gt;" TimeoutMS="75000">
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:TypeInto.Target>
+      <ui:TypeInto.Text>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">in_row["Claimant Company Name"].ToString()</CSharpValue>
+        </InArgument>
+      </ui:TypeInto.Text>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:TypeInto>
+    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into CLAIMANT HOME PHONE" EmptyField="True" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="TypeInto_7">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="af2f4a50-5d50-495d-8753-624a2b4e52f2" InformativeScreenshot="4af973041fa38b2c885f5d9c9bab2f56" Selector="&lt;html app='chrome.exe' title='Claim Search' /&gt;&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl visibleinnertext='Claimant Home Phone' idx='2' /&gt;&lt;webctrl name='*ClaimantPhone' tag='INPUT' type='text' /&gt;" TimeoutMS="75000">
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:TypeInto.Target>
+      <ui:TypeInto.Text>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">in_row["Claimant Home Phone"].ToString()</CSharpValue>
+        </InArgument>
+      </ui:TypeInto.Text>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:TypeInto>
+    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into CLAIMANT WORK PHONE" EmptyField="True" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="TypeInto_8">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="af2f4a50-5d50-495d-8753-624a2b4e52f2" InformativeScreenshot="c7843efb7fd2897593fb11e0fbb4942c" Selector="&lt;html app='chrome.exe' title='Claim Search' /&gt;&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl visibleinnertext='Claimant Work Phone' idx='2' /&gt;&lt;webctrl name='*ClaimantWorkPhone' tag='INPUT' type='text' /&gt;" TimeoutMS="75000">
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:TypeInto.Target>
+      <ui:TypeInto.Text>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">in_row["Claimant Work Phone"].ToString()</CSharpValue>
+        </InArgument>
+      </ui:TypeInto.Text>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:TypeInto>
+    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into CLAIMANT MOBILE PHONE" EmptyField="True" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="TypeInto_9">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="af2f4a50-5d50-495d-8753-624a2b4e52f2" InformativeScreenshot="a59d4feacd97e003035cdc17a7a18498" Selector="&lt;html app='chrome.exe' title='Claim Search' /&gt;&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl visibleinnertext='Claimant Mobile Phone' idx='2' /&gt;&lt;webctrl name='*ClaimantMobilePhone' tag='INPUT' type='text' /&gt;" TimeoutMS="75000">
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:TypeInto.Target>
+      <ui:TypeInto.Text>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">in_row["Claimant Mobile Phone"].ToString()</CSharpValue>
+        </InArgument>
+      </ui:TypeInto.Text>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:TypeInto>
+    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into CLAIMANT EMAIL ADDRESS" EmptyField="True" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="TypeInto_10">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="af2f4a50-5d50-495d-8753-624a2b4e52f2" InformativeScreenshot="9673f0271c3aeff67723e77d4e544ab2" Selector="&lt;html app='chrome.exe' title='Claim Search' /&gt;&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl visibleinnertext='Claimant Email Address' idx='1' /&gt;&lt;webctrl name='*ClaimantEmail' tag='INPUT' type='text' /&gt;" TimeoutMS="75000">
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:TypeInto.Target>
+      <ui:TypeInto.Text>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">in_row["Claimant Email Address"].ToString()</CSharpValue>
+        </InArgument>
+      </ui:TypeInto.Text>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:TypeInto>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Screenshot.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Screenshot.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_fileName">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">in_loc+"Success\\"+in_row["Test Scenario ID"].ToString()+DateTime.Now.ToString("MMddyyyyHHmmss")+".png"</CSharpValue>
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click NEXT PAGE 3" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="692c9f10-227d-40a0-9652-3dbb38c2112f" InformativeScreenshot="a5eab274c7ed116a1f40ba33f603e89b" Selector="&lt;html app='chrome.exe' title='Claim Search' /&gt;&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='button' aaname='Next' /&gt;" TimeoutMS="75000">
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click EXAMINER" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="692c9f10-227d-40a0-9652-3dbb38c2112f" InformativeScreenshot="09a5a6bd6c54ba64bdb7bfe77cb251ca" Selector="&lt;html app='chrome.exe' title='Claim Search' /&gt;&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl id='*Examiner' visibleinnertext='* Examiner ' /&gt;&lt;webctrl isleaf='1' tag='SPAN' idx='3' /&gt;" TimeoutMS="75000">
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">ExaminerType</CSharpReference>
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">in_row["Examiner"].ToString()</CSharpValue>
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click EXAMINER TYPE" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="692c9f10-227d-40a0-9652-3dbb38c2112f" InformativeScreenshot="15aefbecf58b712003d138190a3ed104" TimeoutMS="75000" WaitForReady="COMPLETE">
+          <ui:Target.Selector>
+            <InArgument x:TypeArguments="x:String">
+              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">string.Format("&lt;html app='chrome.exe' title='Claim Search' /&gt;&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl class='rcbHovered' tag='LI' aaname='{0}' innertext='{0}' /&gt;", ExaminerType)</CSharpValue>
+            </InArgument>
+          </ui:Target.Selector>
+        </ui:Target>
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click MATTER TYPE" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True" UnblockInput="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="692c9f10-227d-40a0-9652-3dbb38c2112f" InformativeScreenshot="2140bb9867f42267ee9001717c0f5409" Selector="&lt;html app='chrome.exe' title='Claim Search' /&gt;&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl aaname='select' css-selector='body&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;button' parentid='*NewClaim_cboPayReason' tag='BUTTON' type='button' class='rcbActionButton' /&gt;&lt;webctrl idx='1' /&gt;" TimeoutMS="75000">
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <If sap:VirtualizedContainerService.HintSize="434,322" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">in_row["Matter Type"].ToString()=="Claim"</CSharpValue>
+        </InArgument>
+      </If.Condition>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="300,140" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click CLAIM MATTER TYPE" sap:VirtualizedContainerService.HintSize="258,52" sap2010:WorkflowViewState.IdRef="Click_26" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition Position="Center">
+                <ui:CursorPosition.OffsetX>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetX>
+                <ui:CursorPosition.OffsetY>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetY>
+              </ui:CursorPosition>
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="692c9f10-227d-40a0-9652-3dbb38c2112f" InformativeScreenshot="6258bed74ef9754716c03c596eda819d" Selector="&lt;html app='chrome.exe' title='Claim Search' /&gt;&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl tag='LI' aaname='Claim' /&gt;" TimeoutMS="75000" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:Click>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into COMMENTS" EmptyField="True" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="TypeInto_12">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="af2f4a50-5d50-495d-8753-624a2b4e52f2" InformativeScreenshot="d02d7a0c4cded369a7c9d8b944fec148" Selector="&lt;html app='chrome.exe' title='Claim Search' /&gt;&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl name='ctl03$ctl00$wizNewClaim$txtClaimLossDesc' tag='TEXTAREA' /&gt;" TimeoutMS="75000">
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:TypeInto.Target>
+      <ui:TypeInto.Text>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">in_row["Comments"].ToString()</CSharpValue>
+        </InArgument>
+      </ui:TypeInto.Text>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:TypeInto>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Screenshot.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Screenshot.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_fileName">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">in_loc+"Success\\"+in_row["Test Scenario ID"].ToString()+DateTime.Now.ToString("MMddyyyyHHmmss")+".png"</CSharpValue>
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click NEXT PAGE 4" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="692c9f10-227d-40a0-9652-3dbb38c2112f" InformativeScreenshot="10f0b650d52805b0316e76c1e6301ef5" Selector="&lt;html app='chrome.exe' title='Claim Search' /&gt;&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='button' aaname='Next' parentid='divNext' /&gt;" TimeoutMS="75000">
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click COVERAGE TAB" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="692c9f10-227d-40a0-9652-3dbb38c2112f" InformativeScreenshot="91b672fc45b495f30b0889f38802223f" Selector="&lt;html app='chrome.exe' title='Claim Search' /&gt;&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl tag='DIV' visibleinnertext='Coverage' idx='1' /&gt;&lt;webctrl css-selector='body&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;button&amp;gt;span' isleaf='1' tag='SPAN' idx='1' /&gt;" TimeoutMS="75000">
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateHover="{x:Null}" DisplayName="Hover CYBER COVERAGE" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Hover_4">
+      <ui:Hover.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Hover.CursorPosition>
+      <ui:Hover.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fa986538-eae3-438e-b3bd-a216cf7a9c3a" InformativeScreenshot="a5f7e4484e54717ee5f1c8c9d488eb8b" Selector="&lt;html app='chrome.exe' title='Claim Search' /&gt;&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl tag='DIV' visibleinnertext='Cyber Liability Coverage' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Hover.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Hover>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click CYBER LIABILITY COVERAGE" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="692c9f10-227d-40a0-9652-3dbb38c2112f" InformativeScreenshot="6ed09c53ab83f58eaaa62ae5a83dd370" Selector="&lt;html app='chrome.exe' title='Claim Search' /&gt;&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl tag='DIV' visibleinnertext='Cyber Liability Coverage' /&gt;" TimeoutMS="75000">
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Screenshot.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Screenshot.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_fileName">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">in_loc+"Success\\"+in_row["Test Scenario ID"].ToString()+DateTime.Now.ToString("MMddyyyyHHmmss")+".png"</CSharpValue>
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click CREATE" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="692c9f10-227d-40a0-9652-3dbb38c2112f" InformativeScreenshot="3b37f9d0164a27a59b55e5d0448e2381" Selector="&lt;html app='chrome.exe' title='Claim Search' /&gt;&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='button' aaname='Create' /&gt;" TimeoutMS="75000">
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Claim Number " sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="GetValue_1">
+      <ui:GetValue.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7a8d02a6-8af4-4639-aa9c-8b4e54a7f3ec" InformativeScreenshot="b769f0d9f42426c190e617c4f882a1ff" Selector="&lt;html app='chrome.exe' title='Claim Search' /&gt;&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl tag='DIV' aaname='Claim #* saved successfully!  Would you like to enter another new claim?' /&gt;" TimeoutMS="75000" WaitForReady="COMPLETE" />
+      </ui:GetValue.Target>
+      <ui:GetValue.Value>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">GetClaim</CSharpReference>
+        </OutArgument>
+      </ui:GetValue.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:GetValue>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Screenshot.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Screenshot.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_fileName">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">in_loc+"Success\\"+in_row["Test Scenario ID"].ToString()+DateTime.Now.ToString("MMddyyyyHHmmss")+".png"</CSharpValue>
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+    <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">GetClaim</CSharpReference>
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">Regex.Match(GetClaim,"Claim\\s*#(\\d+\\w+)").Groups[1].Value</CSharpValue>
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Int32">
+          <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">in_rownumber</CSharpReference>
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Int32">
+          <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_48">in_rownumber+1</CSharpValue>
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Object">
+          <CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">in_row["Claim Number"]</CSharpReference>
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_57">GetClaim</CSharpValue>
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="2000" DisplayName="Click CANCEL" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="692c9f10-227d-40a0-9652-3dbb38c2112f" InformativeScreenshot="eaf55c915da13d8a5b7ad1b0d34a9f24" Selector="&lt;html app='chrome.exe' title='Claim Search' /&gt;&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl tag='BUTTON' aaname='Cancel' innertext='Cancel' /&gt;" TimeoutMS="75000" WaitForReady="COMPLETE" />
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="2000" DisplayName="Click GET CLAIM" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="692c9f10-227d-40a0-9652-3dbb38c2112f" InformativeScreenshot="ef14cdba49386cb14b67c18168cdadef" Selector="&lt;html app='chrome.exe' title='Claim Search' /&gt;&lt;webctrl id='txtClaimSearch' tag='INPUT' placeholder='Get Claim' /&gt;" TimeoutMS="75000" WaitForReady="COMPLETE" />
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayBefore="5000" DisplayName="Type Into GET CLAIM" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="TypeInto_13" SimulateType="True">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="af2f4a50-5d50-495d-8753-624a2b4e52f2" InformativeScreenshot="ee2cd26c5babb186d94ae71a17e32c5c" Selector="&lt;html app='chrome.exe' title='Claim Search' /&gt;&lt;webctrl id='*ClaimSearch' tag='INPUT' placeholder='Get Claim' /&gt;" TimeoutMS="95000" WaitForReady="COMPLETE" />
+      </ui:TypeInto.Target>
+      <ui:TypeInto.Text>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">GetClaim</CSharpValue>
+        </InArgument>
+      </ui:TypeInto.Text>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:TypeInto>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click SEARCH" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="692c9f10-227d-40a0-9652-3dbb38c2112f" InformativeScreenshot="19e18b88feaa8a1dc5e22af2381bc541" Selector="&lt;html app='chrome.exe' title='Claim Search' /&gt;&lt;webctrl isleaf='1' parentid='toolbar' tag='A' parentclass='get-claim' /&gt;" TimeoutMS="75000" WaitForReady="COMPLETE" />
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click CLAIM SUMMARY" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="692c9f10-227d-40a0-9652-3dbb38c2112f" InformativeScreenshot="2d173534674a9a08134afb37af7e9c17" Selector="&lt;html app='chrome.exe' title='Claim Summary' /&gt;&lt;webctrl aaname='Claim Summary' tag='SPAN' innertext='Claim Summary' idx='1' /&gt;" TimeoutMS="75000" WaitForReady="COMPLETE" />
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Delay_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Delay>
+    <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateHover="{x:Null}" DisplayName="Hover COVERAGE SECTION" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Hover_1">
+      <ui:Hover.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Hover.CursorPosition>
+      <ui:Hover.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fa986538-eae3-438e-b3bd-a216cf7a9c3a" InformativeScreenshot="e4790ab8c93cf4018e8350ae8fde5178" Selector="&lt;html app='chrome.exe' title='Claim Summary' /&gt;&lt;webctrl aaname='Coverage' tag='DIV' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Hover.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Hover>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Screenshot.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Screenshot.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_fileName">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_51">in_loc+"Success\\"+in_row["Test Scenario ID"].ToString()+DateTime.Now.ToString("MMddyyyyHHmmss")+".png"</CSharpValue>
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+    <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateHover="{x:Null}" DisplayName="Hover CLAIM SUMMARY" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Hover_2">
+      <ui:Hover.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Hover.CursorPosition>
+      <ui:Hover.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fa986538-eae3-438e-b3bd-a216cf7a9c3a" InformativeScreenshot="669bc3b561121cc47ed2606ae35a34b8" Selector="&lt;html app='chrome.exe' title='Claim Summary' /&gt;&lt;webctrl aaname='Claim Summary' tag='SPAN' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Hover.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Hover>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click CLAIM MAINTANENCE" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="692c9f10-227d-40a0-9652-3dbb38c2112f" InformativeScreenshot="3857ac17b582cef399c622ec21f08cc4" Selector="&lt;html app='chrome.exe' title='Claim Summary' /&gt;&lt;webctrl aaname='Claim Maintenance' class='caption' tag='SPAN' innertext='Claim Maintenance' /&gt;" TimeoutMS="75000" WaitForReady="COMPLETE" />
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text CLAMANT FIRST NAME" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="GetValue_2">
+      <ui:GetValue.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7cd161b5-53b6-4070-9c0e-f1515e79c23e" InformativeScreenshot="fe07a71907335b69529931cdad445746" Selector="&lt;html app='chrome.exe' title='Claim Maintenance Claim#:*' /&gt;&lt;webctrl name='*ClaimantFirstName' tag='INPUT' type='text' /&gt;" TimeoutMS="75000" WaitForReady="COMPLETE" />
+      </ui:GetValue.Target>
+      <ui:GetValue.Value>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">CLMNTFIRSTNAME</CSharpReference>
+        </OutArgument>
+      </ui:GetValue.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:GetValue>
+    <If sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="If_2">
+      <If.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">CLMNTFIRSTNAME == in_row["Claimant First Name"].ToString()</CSharpValue>
+        </InArgument>
+      </If.Condition>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Throw sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="Throw_1">
+          <InArgument x:TypeArguments="s:Exception">
+            <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32">new BusinessRuleException("Claimant First Name does not match")</CSharpValue>
+          </InArgument>
+        </Throw>
+      </If.Else>
+    </If>
+    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text CLAMAINT LAST NAME" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="GetValue_3">
+      <ui:GetValue.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7cd161b5-53b6-4070-9c0e-f1515e79c23e" InformativeScreenshot="b7bdd22f625010bb747198e3e499e158" Selector="&lt;html app='chrome.exe' title='Claim Maintenance Claim#:*' /&gt;&lt;webctrl name='*ClaimantLastName' tag='INPUT' type='text' /&gt;" TimeoutMS="75000" WaitForReady="COMPLETE" />
+      </ui:GetValue.Target>
+      <ui:GetValue.Value>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">CLMNTLASTNAME</CSharpReference>
+        </OutArgument>
+      </ui:GetValue.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:GetValue>
+    <If sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="If_3">
+      <If.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">CLMNTLASTNAME == in_row["Claimant Last Name"].ToString()</CSharpValue>
+        </InArgument>
+      </If.Condition>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Throw sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="Throw_2">
+          <InArgument x:TypeArguments="s:Exception">
+            <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">new BusinessRuleException("Claimant Last Name does not match")</CSharpValue>
+          </InArgument>
+        </Throw>
+      </If.Else>
+    </If>
+    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text CLAIMANT COMPANY NAME" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="GetValue_4">
+      <ui:GetValue.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7cd161b5-53b6-4070-9c0e-f1515e79c23e" InformativeScreenshot="f6219530df46864109eeb74701cccaa7" Selector="&lt;html app='chrome.exe' title='Claim Maintenance Claim#:*' /&gt;&lt;webctrl name='*CompanyName' tag='INPUT' type='text' /&gt;" TimeoutMS="75000" WaitForReady="COMPLETE" />
+      </ui:GetValue.Target>
+      <ui:GetValue.Value>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">CLMNTCOMPNAME</CSharpReference>
+        </OutArgument>
+      </ui:GetValue.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:GetValue>
+    <If sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="If_4">
+      <If.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">CLMNTCOMPNAME == in_row["Claimant Company Name"].ToString()</CSharpValue>
+        </InArgument>
+      </If.Condition>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_12">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Throw sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="Throw_3">
+          <InArgument x:TypeArguments="s:Exception">
+            <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">new BusinessRuleException("Claimant Company Name does not match")</CSharpValue>
+          </InArgument>
+        </Throw>
+      </If.Else>
+    </If>
+    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text CLAIMANT EMAIL" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="GetValue_5">
+      <ui:GetValue.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7cd161b5-53b6-4070-9c0e-f1515e79c23e" InformativeScreenshot="3ce0eeae2fb887f1eff271cf4ff239c1" Selector="&lt;html app='chrome.exe' title='Claim Maintenance Claim#:*' /&gt;&lt;webctrl name='*Email' tag='INPUT' type='text' /&gt;" TimeoutMS="75000" WaitForReady="COMPLETE" />
+      </ui:GetValue.Target>
+      <ui:GetValue.Value>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">CLMNTEMAIL</CSharpReference>
+        </OutArgument>
+      </ui:GetValue.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:GetValue>
+    <If sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="If_5">
+      <If.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37">CLMNTEMAIL == in_row["Claimant Email Address"].ToString()</CSharpValue>
+        </InArgument>
+      </If.Condition>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_13">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Throw sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="Throw_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <InArgument x:TypeArguments="s:Exception">
+            <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">new BusinessRuleException("Claimant Email does not match")</CSharpValue>
+          </InArgument>
+        </Throw>
+      </If.Else>
+    </If>
+    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text CLAIMANT HOME PHONE" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="GetValue_6">
+      <ui:GetValue.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7cd161b5-53b6-4070-9c0e-f1515e79c23e" InformativeScreenshot="179f49f43a8f225ae828aafe9618b61c" Selector="&lt;html app='chrome.exe' title='Claim Maintenance Claim#:*' /&gt;&lt;webctrl name='*HomePhone' tag='INPUT' type='text' /&gt;" TimeoutMS="75000" WaitForReady="COMPLETE" />
+      </ui:GetValue.Target>
+      <ui:GetValue.Value>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">CLMNTHOMEPHONE</CSharpReference>
+        </OutArgument>
+      </ui:GetValue.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:GetValue>
+    <If sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="If_6">
+      <If.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">CLMNTHOMEPHONE == in_row["Claimant Home Phone"].ToString()</CSharpValue>
+        </InArgument>
+      </If.Condition>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_14">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Throw sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="Throw_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <InArgument x:TypeArguments="s:Exception">
+            <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">new BusinessRuleException("Claimant Home Phone does not match")</CSharpValue>
+          </InArgument>
+        </Throw>
+      </If.Else>
+    </If>
+    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text CLAIMANT WORK PHONE" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="GetValue_7">
+      <ui:GetValue.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7cd161b5-53b6-4070-9c0e-f1515e79c23e" InformativeScreenshot="2d000e67c2cf6ef808ecb923171b9d37" Selector="&lt;html app='chrome.exe' title='Claim Maintenance Claim#:*' /&gt;&lt;webctrl name='*WorkPhone' tag='INPUT' type='text' /&gt;" TimeoutMS="75000" WaitForReady="COMPLETE" />
+      </ui:GetValue.Target>
+      <ui:GetValue.Value>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">CLMNTWORKPHONE</CSharpReference>
+        </OutArgument>
+      </ui:GetValue.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:GetValue>
+    <If sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="If_7">
+      <If.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">CLMNTWORKPHONE == in_row["Claimant Work Phone"].ToString()</CSharpValue>
+        </InArgument>
+      </If.Condition>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_15">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Throw sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="Throw_6">
+          <InArgument x:TypeArguments="s:Exception">
+            <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42">new BusinessRuleException("Claimant Work Phone does not match")</CSharpValue>
+          </InArgument>
+        </Throw>
+      </If.Else>
+    </If>
+    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text CLAIMANT MOBILE PHONE" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="GetValue_8">
+      <ui:GetValue.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7cd161b5-53b6-4070-9c0e-f1515e79c23e" InformativeScreenshot="5becf8197b24290b0d135212c6132bcb" Selector="&lt;html app='chrome.exe' title='Claim Maintenance Claim#:*' /&gt;&lt;webctrl name='*MobilePhone' tag='INPUT' type='text' /&gt;" TimeoutMS="75000" WaitForReady="COMPLETE" />
+      </ui:GetValue.Target>
+      <ui:GetValue.Value>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">CLMNTMOBPHONE</CSharpReference>
+        </OutArgument>
+      </ui:GetValue.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:GetValue>
+    <If sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="If_8">
+      <If.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43">CLMNTMOBPHONE == in_row["Claimant Mobile Phone"].ToString()</CSharpValue>
+        </InArgument>
+      </If.Condition>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_16">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Throw sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="Throw_7">
+          <InArgument x:TypeArguments="s:Exception">
+            <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_44">new BusinessRuleException("Claimant Mobile Phone does not match")</CSharpValue>
+          </InArgument>
+        </Throw>
+      </If.Else>
+    </If>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click CLAIM " sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Click_21" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="692c9f10-227d-40a0-9652-3dbb38c2112f" InformativeScreenshot="72c4c60b672727490e43b5945eaf7a48" Selector="&lt;html app='chrome.exe' title='Claim Maintenance Claim#:*' /&gt;&lt;webctrl tag='LI' visibleinnertext='CLAIM' /&gt;" TimeoutMS="75000">
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into MADE DATE" EmptyField="True" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="TypeInto_16">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="af2f4a50-5d50-495d-8753-624a2b4e52f2" InformativeScreenshot="cc5b4c75e1d9fd4ac587cff1ef503c8f" Selector="&lt;html app='chrome.exe' title='Claim Maintenance' /&gt;&lt;webctrl visibleinnertext='Claims Made Date' idx='2' /&gt;&lt;webctrl tag='INPUT' type='text' idx='2' /&gt;" TimeoutMS="65000">
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:TypeInto.Target>
+      <ui:TypeInto.Text>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_56">DateTime.Parse(in_row["Claims Made Date"].ToString()).ToString("MM/dd/yyyy")</CSharpValue>
+        </InArgument>
+      </ui:TypeInto.Text>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:TypeInto>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="2000" DisplayName="Click EXTERNAL CLAIM " sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Click_25" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="692c9f10-227d-40a0-9652-3dbb38c2112f" InformativeScreenshot="4d57c7cd2837ca6012b49311ae294153" Selector="&lt;html app='chrome.exe' title='Claim Maintenance' /&gt;&lt;webctrl visibleinnertext='External Claim*' /&gt;&lt;webctrl tag='INPUT' type='text' /&gt;" TimeoutMS="75000" WaitForReady="NONE" />
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Screenshot.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Screenshot.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_fileName">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">in_loc+"Success\\"+in_row["Test Scenario ID"].ToString()+DateTime.Now.ToString("MMddyyyyHHmmss")+".png"</CSharpValue>
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="2000" DisplayName="Click SAVE " sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Click_22" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="692c9f10-227d-40a0-9652-3dbb38c2112f" InformativeScreenshot="d0d995798aa53f57120e17a82ddbf631" Selector="&lt;html app='chrome.exe' title='Claim Maintenance' /&gt;&lt;webctrl class='no-border' parentid='divPageActions' tag='A' aaname='Save' innertext='Save' /&gt;" TimeoutMS="75000" WaitForReady="NONE" />
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Screenshot.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Screenshot.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_fileName">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">in_loc+"Success\\"+in_row["Test Scenario ID"].ToString()+DateTime.Now.ToString("MMddyyyyHHmmss")+".png"</CSharpValue>
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click OK " sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Click_23" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="692c9f10-227d-40a0-9652-3dbb38c2112f" InformativeScreenshot="b5666b7fe28a0ec999929d96bb052d67" Selector="&lt;html app='chrome.exe' title='Claim Maintenance*' /&gt;&lt;webctrl tag='BUTTON' aaname='OK' innertext='OK' /&gt;" TimeoutMS="75000">
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click COVERAGE " sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Click_24" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="692c9f10-227d-40a0-9652-3dbb38c2112f" InformativeScreenshot="93b0dc951c7b7b90ecd136801451c640" Selector="&lt;html app='chrome.exe' title='Claim*' /&gt;&lt;webctrl tag='SPAN' innertext='Coverage' /&gt;" TimeoutMS="75000">
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateHover="{x:Null}" DisplayName="Hover SCROLL DOWN" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Hover_3">
+      <ui:Hover.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Hover.CursorPosition>
+      <ui:Hover.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fa986538-eae3-438e-b3bd-a216cf7a9c3a" InformativeScreenshot="460ec8089df3cfacf1004ad5aeca6413" Selector="&lt;html app='chrome.exe' title='Claim Maintenance' /&gt;&lt;webctrl visibleinnertext='Separate Defense Limit Aggregate' /&gt;&lt;webctrl tag='INPUT' type='text' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Hover.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Hover>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Screenshot.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Screenshot.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_fileName">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_55">in_loc+"Success\\"+in_row["Test Scenario ID"].ToString()+DateTime.Now.ToString("MMddyyyyHHmmss")+".png"</CSharpValue>
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click HOME" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="692c9f10-227d-40a0-9652-3dbb38c2112f" InformativeScreenshot="d838f0da5be91a505487237381a08273" Selector="&lt;html app='chrome.exe' title='Claim*' /&gt;&lt;webctrl tag='*' aaname='Home' /&gt;" TimeoutMS="75000" WaitForReady="COMPLETE" />
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_6">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Object">
+          <CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_14">in_row["Status"]</CSharpReference>
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">"Pass"</CSharpValue>
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_7">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Object">
+          <CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_15">in_row["Actual Output"]</CSharpReference>
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">"Cyber Coverage Claim was created successfully."</CSharpValue>
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+  </Sequence>
+</Activity>

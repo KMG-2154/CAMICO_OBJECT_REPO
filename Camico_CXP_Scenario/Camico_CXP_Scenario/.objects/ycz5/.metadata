@@ -1,0 +1,14 @@
+﻿{
+  "Id": "ycz599InkEOG6ejsVWqYTQ",
+  "Reference": "-jKMINgrYUS4ZtVTq7DnnA/ycz599InkEOG6ejsVWqYTQ",
+  "Name": "Login CXP Claims Xpress",
+  "Type": "App",
+  "Created": "2023-07-18T06:02:38.0107097Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-24T08:27:42.0348035Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

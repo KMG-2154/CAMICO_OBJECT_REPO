@@ -1,0 +1,13 @@
+﻿{
+  "Id": "Vl3dlcTC-U6ayBojOYGUaw",
+  "Reference": "-jKMINgrYUS4ZtVTq7DnnA/Vl3dlcTC-U6ayBojOYGUaw",
+  "ParentRef": "-jKMINgrYUS4ZtVTq7DnnA/SHfMKyn1QEeLdlClB2A9Gw",
+  "Name": "Potential Claim",
+  "Type": "Element",
+  "TaxonomyType": "Icon",
+  "Created": "2023-07-25T06:01:21.9301407Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-25T06:01:21.9301407Z"
+}

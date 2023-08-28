@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="it9_3Tk49ESsQsBZUkefGA" Reference="-jKMINgrYUS4ZtVTq7DnnA/kHRULeCkrUCa8QqnKsdSWw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://camico.sims.imp.uat.oceanwidebridge.com/Sims/(S(rzbgl3ilbhye03y3fkjbjqkn))/Claims/ClaimSummary.aspx" ContentHash="clFaTcpR6EiOTa41Daspkw" DesignTimeRectangle="61, 440, 176, 15" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Claim Maintenance'" FullSelectorArgument="&lt;webctrl aaname='Claim Maintenance' class='caption' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Claim Maintenance' class='caption' tag='SPAN' type='' check:innerText='Claim Maintenance' /&gt;" Guid="c13b5bcf-ae9c-4fee-9ae5-c336481fffae" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAdSURBVBhXY4CB/1AA5UIEbt+5iyogmb4RXWDjfwCC/hvg3Sr1RgAAAABJRU5ErkJggg==" Reference="-jKMINgrYUS4ZtVTq7DnnA/kHRULeCkrUCa8QqnKsdSWw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Claim Summary Claim#: 2023M001267' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="23d3db24f0330c1e03ae335ee978a055.png" xmlns="">0AfzwgjNTUECEKP6N3h5beA</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

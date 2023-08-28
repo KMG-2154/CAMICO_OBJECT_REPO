@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="-yB0GeBv8EWpPtnBYVtsPw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://camico.sims.imp.uat.oceanwidebridge.com/Sims/(S(vs42sy3i2nedoq3przfyoqtv))/Claims/Payments.aspx" DesignTimeRectangle="278, 157, 82, 20" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Home'" FullSelectorArgument="&lt;webctrl tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='A' type='' class='rmLink rmRootLink' aaname='Home' check:innerText='HOME' /&gt;" Guid="73010ed1-5c5c-42a3-a60a-33e833fe05cf" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFYAAAAYCAYAAABgBArrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFfSURBVGhD7ZaxTgJBEIZ9O9+Anpy1kRITazsKWyrfwMqGV7AgoSYmFlcaqaRb85/3wzjZ4RBvDLmdL9nA7c7M3ny3XLhIgQsh1okQ2xN1XbffvgmxPRFinQixToRYJ1zErl/f0qi6Tk/Pi3bmJy/LVbOOOA1zL0fj3bi7n6XP7baN2IM6WLf2Iaz5MH9sZ/a5uWHt9xvOSiwaR2M6z5qnHOshEebnxOLTg7MRi9hDgnLrqHM1uW1OmJQmsWKKEPv+sWmat+QA/DRzclCH8rQk5uA+kFecWMZ3NQkxEIgHAWQd7KXfjXJuUGJx49aQYo9tEqIssTz1fJi8Zk1LrB4y5i8M5sTymuuIlSfYEtu156kM4h3LOoypbqbN4DwoUixArJ6T5NZzdbi3fkjFigVoHM3qPGveqpOjaLGAuWiaQ75XJX2IzQ397+IUXMQGIdaNEOtEiHUixP4TIdaFlL4A6sXiRKjck5gAAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Payments' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="1cf41e2bd57d52efedc466723f8513b4.png" xmlns="">0i3-MWXpHakWp1R1rsE8d6Q</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

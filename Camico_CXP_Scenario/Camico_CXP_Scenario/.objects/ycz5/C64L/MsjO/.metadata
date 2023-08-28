@@ -1,0 +1,12 @@
+﻿{
+  "Id": "MsjOnnQcUUOTDf-6aPxC1Q",
+  "Reference": "-jKMINgrYUS4ZtVTq7DnnA/MsjOnnQcUUOTDf-6aPxC1Q",
+  "ParentRef": "-jKMINgrYUS4ZtVTq7DnnA/C64LFY1ql0qGmII1tNnW4A",
+  "Name": "Chrome: Login Page - CXP Claims",
+  "Type": "Screen",
+  "Created": "2023-07-18T06:02:38.1823048Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-18T06:02:38.1823048Z"
+}

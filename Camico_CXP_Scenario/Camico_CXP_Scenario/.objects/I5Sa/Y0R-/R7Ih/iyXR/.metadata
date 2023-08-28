@@ -1,0 +1,13 @@
+﻿{
+  "Id": "iyXRq98e0k-VKrg6FEqzAA",
+  "Reference": "-jKMINgrYUS4ZtVTq7DnnA/iyXRq98e0k-VKrg6FEqzAA",
+  "ParentRef": "-jKMINgrYUS4ZtVTq7DnnA/R7IhKESaPUOUdtSUa6yHRA",
+  "Name": "Employment Practices",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2023-07-26T05:29:16.399283Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-26T05:29:16.399283Z"
+}

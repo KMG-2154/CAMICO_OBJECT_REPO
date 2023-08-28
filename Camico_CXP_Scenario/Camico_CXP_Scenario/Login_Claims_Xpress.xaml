@@ -1,0 +1,320 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Login_Bridge_Suite" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="656,1319" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Login_Claims_Xpress" sap:VirtualizedContainerService.HintSize="642,1254" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="Username" />
+      <Variable x:TypeArguments="ss:SecureString" Name="Password" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="Opens the uat environment tab." BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="580,1143" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" Url="https://camico.sims.imp.uat.oceanwidebridge.com/Sims/(S(2q3y00jijskw5h0ypraf53k1))/login.aspx?ReturnUrl=%2fSims%2f">
+      <ui:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="546,1010" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MaximizeWindow Window="{x:Null}" sap2010:Annotation.AnnotationText="Used for maximizing the screen." DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="484,67" sap2010:WorkflowViewState.IdRef="MaximizeWindow_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:MaximizeWindow>
+            <ui:GetRobotCredential sap2010:Annotation.AnnotationText="Username &amp; Password stored in orchestrator." AssetName="Camico_ClaimsXpress" CacheStrategy="None" DisplayName="Get Credential" FolderPath="kamakshi.tewari@kmgus.com's workspace" sap:VirtualizedContainerService.HintSize="484,94" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2">
+              <ui:GetRobotCredential.Password>
+                <OutArgument x:TypeArguments="ss:SecureString">
+                  <CSharpReference x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">Password</CSharpReference>
+                </OutArgument>
+              </ui:GetRobotCredential.Password>
+              <ui:GetRobotCredential.TimeoutMS>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:GetRobotCredential.TimeoutMS>
+              <ui:GetRobotCredential.Username>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">Username</CSharpReference>
+                </OutArgument>
+              </ui:GetRobotCredential.Username>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:GetRobotCredential>
+            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome: Login Page - CXP Claims" sap:VirtualizedContainerService.HintSize="484,658" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="2d336f3b-d23c-4435-8fa2-1607e2d763d1" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,441" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="Delay_1">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Delay>
+                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <TryCatch.Try>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="NTypeInto_6" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://camico.sims.imp.uat.oceanwidebridge.com/Sims/(S(kyiv1zkhfd5fac0ctwkev41o))/login.aspx?ReturnUrl=%2fSims%2f" ContentHash="HeMAh95gfkqlGKr-WUQYqQ" DesignTimeRectangle="486, 306, 396, 42" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT Login1_UserName'" FullSelectorArgument="&lt;webctrl name='Login1$UserName' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='Login1$UserName' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="ca85be28-f7cd-464f-8da1-849177413f38" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZAAAAAuCAYAAAAGCE99AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMRSURBVHhe7dz/a1V1HMfx/rkIw+yXUNMU8Usr+sIUxH7wlyR/KvrF6qeIwITAiOrHCFIwScFWopheppZb2F3pvbp2tx+On/Y+nK25HWt94B7uqccDXmyc89n59cm5F/ZYAoAMywEpiiLNDQbp/uwfZmZmaxaNiFYsKQMSF+LmTL+XrnZvpYnpTrowdc3MzKxsQrQhGhGtWIpIGZCoStyIQ93ZXioe/FUYAP7fognRhmhEtCKaEcqARFGiLnEAAOpEI6IV0YywHJAoizcPAB4lGhGtWBOQ+JwLAP5OtEJAAPjXBASALAICQBYBASCLgACQRUAAyCIgAGQREACyNBqQa5M30htvv5e2jR0od+Std9KPnevVXQDapLGAfHfxcnr8mV21Oz9xsToFQFs0EpD5+YW0cdvztfGIbdiyJ80N5qvTALRBIwH5+sy3teFYuS9PnalOA9AGjQTko5Of10Zj5T78+NPqNABt0EhATn1zrjYaK/fV6bPVaQDaoJGAzC8spI3bH/0dyJPP7vUdCEDLNBKQ8Pudu+mJzbtrA/LrzG/VKQDaopGA9O7dT53Jm6nXv5dOfPJF2n/4aBpf3PGTn6U7vX7qXL+Z7i7+BKA9hh6QqV9up637xss3jWPvH0+TN35Ot7sz5eL3dz84Ud7bvOfV9NPUdPVXAIy6oQakv/jm8fSOFx/6uCq26bmxtGnHC2uuP7V9rHwjAWD0DTUg8VHV6kj8015+7Uj11wCMsqEF5PtLV2oDsZ5d+OFS9RQARtXQAhL/NLEuDuvZ628eq54CwKgaWkDi+4y6OKxnG7burZ4CwKgaWkB2vXIobdk3nrWdLx2sngLAqBpaQAD4bxMQALIICABZBASALAICQBYBASCLgACQRUAAyCIgAGSpDcjEdCcVD4ryIgCsFo2IVqwJyNXurdSd7ZUXAWC1aES04qGAzA0GaabfK8sSB7yJALAkmhBtiEZEK6IZoQxIURRlUeJG1CUOxedcZmZm0YRoQzQiWhHNWA5IiAtRlbhpZma2etGIpXiE5YAAwPql9CcwGUh25d0oUQAAAABJRU5ErkJggg==" InformativeScreenshot="5f82c806b336da56a267fdb80f2a7679.png" IsResponsive="True" Reference="-jKMINgrYUS4ZtVTq7DnnA/1Ui9my0M20ujTGrepBOv5A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login Page - CXP Claims' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="491, 282, 66, 17" ElementType="Text" FriendlyName="'Username'" FullSelectorArgument="&lt;webctrl aaname='Username' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Username' tag='SPAN' type='' class='' check:innerText='Username' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAAVCAYAAAD7NJjdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGJSURBVFhH7ZWxjcMwDAB/uWyQ/kdw79YjuEuZDdK48g6GG68QQEvwRYq2KEoEHsp3zwMERJREUWfL+QKniYsxcDEGLsbAxRi4GIMsZn/C7f6EjbuZAK/xG26Pg/v/Axdj4GIM+sTQ3BjjNu8cR8IKgzH2XibKsz14fFzh3YpjUw+C5pxj9wlegQciuG5YjlTnlfeA2ZgPxRiuLQaJDjEpqTzwtvMYS8ljODcXdR6uEBmp4joP9lkigbWKfhKa99F9yn/NT/VnGel8uqZuMS3L55OXYOycWxaYqeNpz9YeBInLtZIIsW+VT55NSSUwpuru/MZwLAqSa4qrIBuv/UiMuqLVvr8UQ2NFHm6qriyGNtZ3EamvjkQWQb+VeUktIFHHlRj90P76jWmQxUTSExcFRCimit72bK+Q0ZIbwrW2V0yxR4T6vWKaDzrWqF6IQgySNkVB3PQbEGLi6xphK0VWr/w4wfzxNyYd5sw5LGvs94pBynz4ocZ/NUklxkm4GAMXY+BiDFxME4AfiAKUsIrXQj4AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                          <uix:NTypeInto.Text>
+                            <InArgument x:TypeArguments="x:String">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">Username</CSharpValue>
+                            </InArgument>
+                          </uix:NTypeInto.Text>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NTypeInto>
+                      </TryCatch.Try>
+                      <TryCatch.Catches>
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ActivityAction x:TypeArguments="s:Exception">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                            </ActivityAction.Argument>
+                            <Sequence sap:VirtualizedContainerService.HintSize="546,446" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="ATTACH BROWSER CLAIMS_XPRESS" sap:VirtualizedContainerService.HintSize="484,283" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="2f6d6602c20cdb6a8e7a7a92fb54e0c3" Selector="&lt;html app='chrome.exe' title='Login Page - CXP Claims' /&gt;">
+                                <ui:BrowserScope.Body>
+                                  <ActivityAction x:TypeArguments="x:Object">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,136" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
+                                    </Sequence>
+                                  </ActivityAction>
+                                </ui:BrowserScope.Body>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:BrowserScope>
+                              <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="484,52" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1" Reason="Website Server Issue">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </TerminateWorkflow>
+                            </Sequence>
+                          </ActivityAction>
+                        </Catch>
+                      </TryCatch.Catches>
+                    </TryCatch>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NTypeInto_7" Version="V3">
+                      <uix:NTypeInto.SecureText>
+                        <InArgument x:TypeArguments="ss:SecureString">
+                          <CSharpValue x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">Password</CSharpValue>
+                        </InArgument>
+                      </uix:NTypeInto.SecureText>
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://camico.sims.imp.uat.oceanwidebridge.com/Sims/(S(kyiv1zkhfd5fac0ctwkev41o))/login.aspx?ReturnUrl=%2fSims%2f" ContentHash="DVzmhZPfCUqq3Xn5PMJJOw" DesignTimeRectangle="486, 387, 396, 42" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'INPUT Login1_Password'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='' aaname='' /&gt;" Guid="b04ce326-d3bf-4510-9ffb-913421bfb2e5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZAAAAAuCAYAAAAGCE99AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMaSURBVHhe7dnti1R1GMfh/rkgTOxpwbS1VFy3xaeSINAoeqJsqbDMF5a98nVIEKKkFiZRUAZFsS1EYEs6S7XSugsuZ+68T2dmm90p7MBMe+y64MvA73fm9Yczc0cAQA3dgBRFEQuLi/H7/HUzM7NVy0ZkKzrKgORBXs5em4up1uW4NDMdX/z0vZmZWdmEbEM2IlvRiUgZkKxKXuRDrfm5KNrLhQHg/y2bkG3IRmQrshmpDEgWJeuSDwBAP9mIbEU2I3UDkmXx5gHA38lGZCtWBSR/5wKAf5KtEBAA/jUBAaAWAQGgFgEBoBYBAaAWAQGgFgEBoBYBAaCWoQZk5srVOPTGsRjZtjvufXginnrp9fj626nqFoAmGVpApn/4MdZt2hF3jmxdtbMXPq2eAqAphhKQpaWluO+RXWUs8vP90+fizPlPYmz/wW5ErrRmq6cBaIKhBOTkqQ/LSOQbyM9XW9VpRLvdjtGJJ8q7V468XZ0C0ARDCciOx/9803j16LvVybJTZz/uvoXcuLFUnQKw1g0lIPsOvhAbRsfjq2++q06W/fLrb7Fhy6Plri8sVKcArHVDCQgAt5+BB+Ti51/G5JF3yp+vnp18M55++XDPnjl0uLzLvffBmepbAKx1Aw/IXRu3d//juJUB0AwDD0j+t9EvFP22/qGd1bcAWOsGHpCR7Xt6InH3prE4ff5CfHTxs9g8vr/nLmMDQDMMPSAPjj1W3UQcePG1njsBAWiO/zQgTz432XMnIADNMfCAPLBtd08k7t+6q7qJ2Hvg+Z47AQFojoEH5K+B6CwjsvHmm0i/OwCaYeABeev4ibhny0T5dlFudLwbi/Wbdy6f31z+JwJAMww8IADcngQEgFoEBIBaBASAWgQEgFoEBIBaBASAWgQEgFoEBIBa+gbk0sx0FO2iPASAlbIR2YpVAZlqXY7W/Fx5CAArZSOyFT0BWVhcjNlrc2VZ8gFvIgB0ZBOyDdmIbEU2I5UBKYqiLEpeZF3yofydy8zMLJuQbchGZCuyGd2ApDzIquSlmZnZymUjOvFI3YAAwK2L+APonISxcLNlMwAAAABJRU5ErkJggg==" InformativeScreenshot="83db900ba0e4ac988974c5f74279aaa7.png" Reference="-jKMINgrYUS4ZtVTq7DnnA/wW2OKZLDZkqJm9mF1ExWYg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login Page - CXP Claims' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="491, 363, 63, 17" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;webctrl aaname='Password' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Password' tag='SPAN' type='' class='' check:innerText='Password' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEMAAAAVCAYAAAAdHVOZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGxSURBVFhH7ZQ7joQwDIb3cnOD6ecI9NNyBDrKucE0VNwB0XAFJC7hdRwnfgQ0ErPboPwSEg878f855geqsioMpQpDqcJQqjCUKgwlgbGN0NwfcDNXC++Nv19I69DC7TnCys9JDoYzP78uCeQcDNjg/XxAM1yLxt/AoJMiY9TN8XVUjM3f9Wa7eQt0+T6Kiry/YOLnYn8/yv0S35PCelj/LDF5bZPXQtefgBGLS+/CZqpQipfngva2wJTzrOlpjiYoJxsSmNYE78GGZB2Oz/lxn9JkfC+nm/M+w4jFyKW75MWd4D3Krib5YpToxCizWOCE66RYDcuCY+n8HeikEOOMF41jfRgTL6afLxevxsGa1yOkgYmBUCDlMJSVc5K5qcdcD8PUvA9jz/j3MIrvYfOj+IMuoXwhwWQzLGg8rRUg4D3NvoCjvBMn439g+ONGhah4/A/Yjou5aZZFC1PpNKm1Q0yDQEwc1afN7v8zigYUeTHuOxjmqIciRtVN7HAwkL7hlccEf6SdzjNjEhSLM2NVGGDx+7yWOSkHMILU+NL+vrEsgVFVYWhVGEoVhlKFkQXwCw+5pLsZHuODAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Login'" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://camico.sims.imp.uat.oceanwidebridge.com/Sims/(S(kyiv1zkhfd5fac0ctwkev41o))/login.aspx?ReturnUrl=%2fSims%2f" ContentHash="82K5WCWzKU-F8fpPcVf25A" DesignTimeRectangle="801, 478, 82, 38" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Login'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='button button-lg round-rect color-bg' aaname='Login' check:text='Login' /&gt;" Guid="1d733651-17c3-4da4-93e0-d904d3390ce4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFYAAAAqCAYAAAAptqxNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIQSURBVGhD7Zq9SgNBFIV9EEvfyd7ORh8lpY1gaS+ktVIbwcJGUgjaaGERiEXAICMn8SyT4e7s7OzNQuAc+CDZOz87385uNQdB2UkkdkfZEvv8Ng8nF4/h6GwaDk9vRAFwBWdwF6cRi4KE1gN3sdxGLKxbHUQ5cMg0YrVbhwOHTCPWaij6w0isM4zEOsNIrDOMxDrDSKwzjMQ6w0isM4zEOsNIrDOMm9jZxyJ8L1fh/OrJrJPJdBZ+Vr//s27yOV+G48mD2R6ghjZp0n5sh3uJ++N/bg7U0z61MKOKRRvk7uWr6Dq4vn9f19okxnPmxCLp9bjeVusLM5pYSMNOxY4trXN3W8ItunYs7s8aa2/F4hpquZu3pOTGtOgSe3n7uh4vfbiop31qYUYRy52H1zqtxcRjtEnK0SUWdezY9D5R7zNPDmYUsfxOdomNFw3w21ow2jHx56NEbNt/a54amL3esRivRizb8XuLem6ePjB7/Y2tFQvih4162qcWZhSxALsjllBS5+LbFj1ELEB/3LPVpxZmNLEAbRC+gl3XARaPpGL4FgwRCzAnkvaphXEVayVdEHdhnK4HQmFp0n41Ytv61MK4iRUbGIl1hpFYZxiJdYaRWGcYiXWGkVhnGIl1hpFYZ5hGrI5xDsc8xqmDx8MxDx7rqPww4M48Ko+gAOsSXA5cwVksFdkSq/hFYneSEP4A8LkoBZkUU+kAAAAASUVORK5CYII=" InformativeScreenshot="8b3c3672dfd9ffb551475ce64e066652.png" Reference="-jKMINgrYUS4ZtVTq7DnnA/9cIfxmviMkmWYtvsUO43CA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login Page - CXP Claims' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NClick>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="Vt_ORXbbQ0qjGVmYag1wIw" IconBase64="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" InformativeScreenshot="cd9997b6a4fc5c46b37bffec027c72b3.jpg" Reference="-jKMINgrYUS4ZtVTq7DnnA/MsjOnnQcUUOTDf-6aPxC1Q" Selector="&lt;html app='chrome.exe' title='Login Page - CXP Claims' /&gt;" Title="Login Page - CXP Claims" Url="https://camico.sims.imp.uat.oceanwidebridge.com/Sims/(S(kyiv1zkhfd5fac0ctwkev41o))/login.aspx?ReturnUrl=%2fSims%2f" />
+              </uix:NApplicationCard.TargetApp>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenBrowser.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:OpenBrowser>
+  </Sequence>
+</Activity>

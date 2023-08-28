@@ -1,0 +1,13 @@
+﻿{
+  "Id": "B2I0jvRzFkWRAty1Jbo0-Q",
+  "Reference": "-jKMINgrYUS4ZtVTq7DnnA/B2I0jvRzFkWRAty1Jbo0-Q",
+  "ParentRef": "-jKMINgrYUS4ZtVTq7DnnA/QTU5IL-6rUiCZAu6k9ZXXQ",
+  "Name": "Claimant Email Address",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Created": "2023-07-26T05:01:20.823787Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-26T05:01:20.823787Z"
+}

@@ -1,0 +1,14 @@
+﻿{
+  "Id": "I5Sa69ZdU0uyTz7U_N9WgA",
+  "Reference": "-jKMINgrYUS4ZtVTq7DnnA/I5Sa69ZdU0uyTz7U_N9WgA",
+  "Name": "Line of Business",
+  "Type": "App",
+  "Created": "2023-07-26T05:29:16.1346122Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-26T05:29:57.7268521Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

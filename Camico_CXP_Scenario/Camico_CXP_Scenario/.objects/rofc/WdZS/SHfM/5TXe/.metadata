@@ -1,0 +1,13 @@
+﻿{
+  "Id": "5TXeyJC5wkCXDINkRlDRAQ",
+  "Reference": "-jKMINgrYUS4ZtVTq7DnnA/5TXeyJC5wkCXDINkRlDRAQ",
+  "ParentRef": "-jKMINgrYUS4ZtVTq7DnnA/SHfMKyn1QEeLdlClB2A9Gw",
+  "Name": "Add Payment",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2023-07-25T06:06:47.2084891Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-25T06:06:47.2084891Z"
+}

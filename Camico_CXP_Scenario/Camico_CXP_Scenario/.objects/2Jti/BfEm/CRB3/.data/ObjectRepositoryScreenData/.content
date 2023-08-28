@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="7Wn5BdPUmEq82yGKLbflOA" Reference="-jKMINgrYUS4ZtVTq7DnnA/CRB3s7sQ90a1JG9fBF-YfQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="RxcrhTYQ4kiXmQ1PLn3CUw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFISURBVDhPjZM9SwNBEEAPUvgLbK2F1ILgD7DyVwhebW8TsEptYRNRCGgjIlporYVFtPEjxE7UEDAoJniE42C8N+7qfcwFHywhm8ybnZndQP7B+d1Q9ts78vpwIVHsNh1TBf2PSJY3znRddm5kdLQqSTxxv/5QKSBrUG/KYrjndkRGzVmVZDEF170XDZ5Zabkd0cwqSFeSJG63QsCREWyd3rudVNDvSHetpoIspmAuPFQBPfDEuwsqoJFZcgKONv6aaOZg6UT7QGayEjy4aueODzkBwdRP4Prmttw25jWYT2uEYJbweNz4zcr8p1EWjJ81mJo5hS+lipLA10y9UA8PtKFPg0/9XqQsYN7cuFQE/kIx2mIDwRTQMC8gMxeKFUV/Y/WYTeSPft5k5QSUUnwHYArgffimY9M7kQoYr0WlAAjmMfESbUS+Ab6vnfTf3/xkAAAAAElFTkSuQmCC" Reference="-jKMINgrYUS4ZtVTq7DnnA/CRB3s7sQ90a1JG9fBF-YfQ" Selector="&lt;html app='chrome.exe' title='Claim Summary*' /&gt;" Title="Claim Summary Claim#: 2023M001267" Url="https://camico.sims.imp.uat.oceanwidebridge.com/Sims/(S(1qeu1omsgmmrrecuokleaqwe))/Claims/ClaimSummary.aspx">
+      <imageRef attrName="InformativeScreenshot" originalValue="b4680cc176c9faf9ff9a7b659931c51f.jpg" xmlns="">0b14DXOjwUEO3VPZftMNjKw</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

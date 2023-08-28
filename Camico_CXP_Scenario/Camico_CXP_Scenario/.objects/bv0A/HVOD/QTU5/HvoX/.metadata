@@ -1,0 +1,13 @@
+﻿{
+  "Id": "HvoX95ppNUG6cNKAUlsdIw",
+  "Reference": "-jKMINgrYUS4ZtVTq7DnnA/HvoX95ppNUG6cNKAUlsdIw",
+  "ParentRef": "-jKMINgrYUS4ZtVTq7DnnA/QTU5IL-6rUiCZAu6k9ZXXQ",
+  "Name": "Report Date",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Created": "2023-07-19T05:09:59.0869343Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-19T05:09:59.0869343Z"
+}

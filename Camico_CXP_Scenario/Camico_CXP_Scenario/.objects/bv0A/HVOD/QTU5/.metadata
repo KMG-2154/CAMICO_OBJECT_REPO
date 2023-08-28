@@ -1,0 +1,15 @@
+﻿{
+  "Id": "QTU5IL-6rUiCZAu6k9ZXXQ",
+  "Reference": "-jKMINgrYUS4ZtVTq7DnnA/QTU5IL-6rUiCZAu6k9ZXXQ",
+  "ParentRef": "-jKMINgrYUS4ZtVTq7DnnA/HVOD0VgZ1kGwjF-LMcPLeQ",
+  "Name": "Chrome: Claim Search",
+  "Type": "Screen",
+  "Created": "2023-07-19T05:09:58.8725321Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-31T11:05:45.3001243Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,14 @@
+﻿{
+  "Id": "uE9YEwfTx0-QbaeGfY8ssQ",
+  "Reference": "-jKMINgrYUS4ZtVTq7DnnA/uE9YEwfTx0-QbaeGfY8ssQ",
+  "Name": "Login UAT Bridge Suite",
+  "Type": "App",
+  "Created": "2023-07-18T06:14:15.0908361Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-24T08:27:51.7769304Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="nNIK63fbj0Gz7YCN82B3lA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://camico.sims.imp.uat.oceanwidebridge.com/Sims/(S(jvrzxwu4gumuz01narassica))/Claims/Lines/PL/SearchClaim.aspx" DesignTimeRectangle="8, 117, 0, 0" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Professional Liability'" FullSelectorArgument="&lt;webctrl aaname='Professional Liability' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Professional Liability' tag='SPAN' type='' class='caption rmLink menu-item' check:innerText='Professional Liability' /&gt;" Guid="1a1014bf-a90b-4f3e-9852-ff3850626a64" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAdSURBVBhXY4CB/1AA5UIEbt+5iyogmb4RXWDjfwCC/hvg3Sr1RgAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Claim Search' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,13 @@
+﻿{
+  "Id": "qQJReu4mGU2ur9Er7lGLFA",
+  "Reference": "-jKMINgrYUS4ZtVTq7DnnA/qQJReu4mGU2ur9Er7lGLFA",
+  "ParentRef": "-jKMINgrYUS4ZtVTq7DnnA/QTU5IL-6rUiCZAu6k9ZXXQ",
+  "Name": "Claimant Company Name",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Created": "2023-07-26T05:01:20.6501022Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-26T05:01:20.6501022Z"
+}

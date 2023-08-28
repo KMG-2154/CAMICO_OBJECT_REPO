@@ -1,0 +1,13 @@
+﻿{
+  "Id": "EBhFdYvXJk-6KefxT5kNFg",
+  "Reference": "-jKMINgrYUS4ZtVTq7DnnA/EBhFdYvXJk-6KefxT5kNFg",
+  "ParentRef": "-jKMINgrYUS4ZtVTq7DnnA/SHfMKyn1QEeLdlClB2A9Gw",
+  "Name": "Find Vendor",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Created": "2023-07-25T06:06:47.2913305Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-25T06:06:47.2913305Z"
+}

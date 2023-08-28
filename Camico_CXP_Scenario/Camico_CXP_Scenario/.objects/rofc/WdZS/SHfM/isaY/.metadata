@@ -1,0 +1,13 @@
+﻿{
+  "Id": "isaY8Kh6tE68DvYEWUsm3w",
+  "Reference": "-jKMINgrYUS4ZtVTq7DnnA/isaY8Kh6tE68DvYEWUsm3w",
+  "ParentRef": "-jKMINgrYUS4ZtVTq7DnnA/SHfMKyn1QEeLdlClB2A9Gw",
+  "Name": "Payment Type",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Created": "2023-07-25T06:06:47.369406Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-25T06:06:47.369406Z"
+}

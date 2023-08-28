@@ -1,0 +1,12 @@
+﻿{
+  "Id": "R7IhKESaPUOUdtSUa6yHRA",
+  "Reference": "-jKMINgrYUS4ZtVTq7DnnA/R7IhKESaPUOUdtSUa6yHRA",
+  "ParentRef": "-jKMINgrYUS4ZtVTq7DnnA/Y0R-uX6lMUCNX3IKBewwfA",
+  "Name": "PL OR EPL Line of Business",
+  "Type": "Screen",
+  "Created": "2023-07-26T05:29:16.1593383Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-26T05:29:16.1593383Z"
+}

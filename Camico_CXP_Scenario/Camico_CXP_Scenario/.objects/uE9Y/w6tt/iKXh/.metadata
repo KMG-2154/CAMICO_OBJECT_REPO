@@ -1,0 +1,12 @@
+﻿{
+  "Id": "iKXh79a8X0CCvtwtg9HqnQ",
+  "Reference": "-jKMINgrYUS4ZtVTq7DnnA/iKXh79a8X0CCvtwtg9HqnQ",
+  "ParentRef": "-jKMINgrYUS4ZtVTq7DnnA/w6ttq7eXuUmfchCMzpRVQw",
+  "Name": "Chrome: camico.imp.uat.oceanwidebridge.com/Lo",
+  "Type": "Screen",
+  "Created": "2023-07-18T06:14:15.2218359Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-18T06:14:15.2218359Z"
+}

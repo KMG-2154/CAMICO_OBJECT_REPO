@@ -1,0 +1,13 @@
+﻿{
+  "Id": "2_MUN3Avak6WIn6HMtpGgw",
+  "Reference": "-jKMINgrYUS4ZtVTq7DnnA/2_MUN3Avak6WIn6HMtpGgw",
+  "ParentRef": "-jKMINgrYUS4ZtVTq7DnnA/QTU5IL-6rUiCZAu6k9ZXXQ",
+  "Name": "Claim Advice",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Created": "2023-07-31T11:05:45.3905433Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-31T11:05:45.3905433Z"
+}

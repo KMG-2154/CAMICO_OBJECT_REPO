@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="0cnqO7Ft2UO-uIkVOxZw3g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://camico.sims.imp.uat.oceanwidebridge.com/Sims/(S(vs42sy3i2nedoq3przfyoqtv))/Claims/Reserves.aspx" DesignTimeRectangle="72, 354, 8, 8" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='IMG' class='' aaname='Expand' /&gt;" Guid="038ac9b3-8de3-4250-8e89-4f2c5c134d00" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAtSURBVChTY/hPIqCOBteQBDDGBuioAaYIF4YB8jUgA3RFyGCANOADJGr4/x8AH84Fb3ub3WQAAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Reserves' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="0f6bb87114d2721b9e09ffee173012e4.png" xmlns="">0y5UXYwqpOkW7_1pGFunUiw</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

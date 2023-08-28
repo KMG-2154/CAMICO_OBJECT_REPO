@@ -1,0 +1,13 @@
+﻿{
+  "Id": "5PMM5YCegkmvsZ6MOBs2QA",
+  "Reference": "-jKMINgrYUS4ZtVTq7DnnA/5PMM5YCegkmvsZ6MOBs2QA",
+  "ParentRef": "-jKMINgrYUS4ZtVTq7DnnA/CRB3s7sQ90a1JG9fBF-YfQ",
+  "Name": "Professional Liability",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2023-07-24T08:28:52.5619079Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-24T08:28:52.5619079Z"
+}

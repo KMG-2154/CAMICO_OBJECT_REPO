@@ -1,0 +1,13 @@
+﻿{
+  "Id": "Ii8CRxeTpU6Vd3aK81BhJg",
+  "Reference": "-jKMINgrYUS4ZtVTq7DnnA/Ii8CRxeTpU6Vd3aK81BhJg",
+  "ParentRef": "-jKMINgrYUS4ZtVTq7DnnA/QTU5IL-6rUiCZAu6k9ZXXQ",
+  "Name": "Policy Number",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Created": "2023-07-19T05:09:59.6030332Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-19T05:09:59.6030332Z"
+}

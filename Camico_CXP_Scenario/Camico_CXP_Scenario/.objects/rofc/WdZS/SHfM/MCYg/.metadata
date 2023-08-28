@@ -1,0 +1,13 @@
+﻿{
+  "Id": "MCYgKCqnxkCHbIzFc-tl1A",
+  "Reference": "-jKMINgrYUS4ZtVTq7DnnA/MCYgKCqnxkCHbIzFc-tl1A",
+  "ParentRef": "-jKMINgrYUS4ZtVTq7DnnA/SHfMKyn1QEeLdlClB2A9Gw",
+  "Name": "Billed Amount",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Created": "2023-07-25T06:39:56.2623467Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-25T06:39:56.2623467Z"
+}

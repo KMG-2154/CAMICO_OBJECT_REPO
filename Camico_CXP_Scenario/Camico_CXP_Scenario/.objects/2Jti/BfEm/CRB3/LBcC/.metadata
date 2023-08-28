@@ -1,0 +1,13 @@
+﻿{
+  "Id": "LBcCWpYUXkCZKyRnxeS41w",
+  "Reference": "-jKMINgrYUS4ZtVTq7DnnA/LBcCWpYUXkCZKyRnxeS41w",
+  "ParentRef": "-jKMINgrYUS4ZtVTq7DnnA/CRB3s7sQ90a1JG9fBF-YfQ",
+  "Name": "Home",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2023-07-26T04:53:48.2551032Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-26T04:53:48.2551032Z"
+}

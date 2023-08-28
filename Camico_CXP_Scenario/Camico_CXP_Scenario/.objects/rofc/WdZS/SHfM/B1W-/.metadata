@@ -1,0 +1,13 @@
+﻿{
+  "Id": "B1W-5unFUk-bDTxQD2Wpbg",
+  "Reference": "-jKMINgrYUS4ZtVTq7DnnA/B1W-5unFUk-bDTxQD2Wpbg",
+  "ParentRef": "-jKMINgrYUS4ZtVTq7DnnA/SHfMKyn1QEeLdlClB2A9Gw",
+  "Name": "Reserves Hover",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Created": "2023-07-25T06:06:47.0391768Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-25T06:06:47.0391768Z"
+}

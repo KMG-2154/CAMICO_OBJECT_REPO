@@ -1,0 +1,13 @@
+﻿{
+  "Id": "xLtCYOmAZkC4J73_z7XkXw",
+  "Reference": "-jKMINgrYUS4ZtVTq7DnnA/xLtCYOmAZkC4J73_z7XkXw",
+  "ParentRef": "-jKMINgrYUS4ZtVTq7DnnA/R7IhKESaPUOUdtSUa6yHRA",
+  "Name": "PL Search",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Created": "2023-07-26T05:29:16.2828816Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-26T05:29:16.2828816Z"
+}

@@ -1,0 +1,16 @@
+﻿{
+  "Id": "2W_4N6xc40qrgGhwNx8vPg",
+  "Reference": "-jKMINgrYUS4ZtVTq7DnnA/2W_4N6xc40qrgGhwNx8vPg",
+  "ParentRef": "-jKMINgrYUS4ZtVTq7DnnA/CRB3s7sQ90a1JG9fBF-YfQ",
+  "Name": "Claim Summary Tab",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2023-07-24T08:28:28.5157102Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-25T05:40:00.0534571Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

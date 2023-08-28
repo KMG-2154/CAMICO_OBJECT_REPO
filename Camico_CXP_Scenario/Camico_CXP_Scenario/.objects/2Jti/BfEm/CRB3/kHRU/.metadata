@@ -1,0 +1,16 @@
+﻿{
+  "Id": "kHRULeCkrUCa8QqnKsdSWw",
+  "Reference": "-jKMINgrYUS4ZtVTq7DnnA/kHRULeCkrUCa8QqnKsdSWw",
+  "ParentRef": "-jKMINgrYUS4ZtVTq7DnnA/CRB3s7sQ90a1JG9fBF-YfQ",
+  "Name": "Claim Maintenance",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2023-07-24T08:28:15.2438645Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-25T06:20:11.5150983Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
