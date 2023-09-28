@@ -7,7 +7,7 @@
     <x:Property Name="in_rownumber" Type="InOutArgument(x:Int32)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>656,6561</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>630,6561</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -383,7 +383,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <uix:NClick ClickType="Single" DisplayName="Click 'Next'" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" Timeout="45" Version="V3">
+            <uix:NClick ClickType="Single" DisplayName="Click 'Next'" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" Timeout="60" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://camico.sims.imp.uat.oceanwidebridge.com/Sims/(S(jvrzxwu4gumuz01narassica))/Claims/Editor.aspx?form=~%2FClaims%2FControls%2FNewClaim.ascx&amp;helpid=820" ContentHash="MpWWeaGLKEWG_9H5xvM07w" DesignTimeRectangle="1179, 631, 73, 38" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Next'" FullSelectorArgument="&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl name='GridEditor' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='button' class='button button-lg round-rect color-bg' aaname='Next' check:text='Next' /&gt;" Guid="a6fa4689-79f0-405e-9530-5b8eae5d2614" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE0AAAAqCAYAAAD2+NZSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHhSURBVGhD7Zq9SgNBFIV9EEvfyd7ORh8lpY1gaS+kElKpjWARBEkhaGMQi4AWAYOMnI1nmV3uTPZuthlzDnwss/P/ORub2QuKO5LWIw1p05dFODq7Dwcn47B/fLXzwAN8wEucWhoqJMsGXmJxtTQYtTqINfDD1NJ0yvLAD1NLsxqKJoykOWAkzQEjaQ4YSXPASJoDRtIcMJLmgJE0B4ykOWAGkzZ7+wzzxTIcju6S9YDl0XgWvlc/f7M387VchdOLh3B5+1qV434xeI9MHt+ruXPBXJjTGqcrzKDSkNwG4zpKu3n6aLRrQ3F4dnkPIBziN43thRn8pKUW21caQD+ePpQ3SSlO2vnkuVpw+1PYRholsD/nSv0UFCcNG8FisWieDNb3lQbYHmPg2f6jxBQpLVW2pLWTO0Hoj8TjWBQrDU+UufCUtK4bww8+2l9P59XT+gdAipUGKAYb3EZauy2e7c8/pmhpAMKwAdT1kcYTG49tvYspXhrA4pE+0lCPdmgfv8/1/xfSeDIsaVb46VF2avMYz6ovRtouwEiaA0bSHDCS5oCRNAeMpDlgJM0BI2kOGElzwNTSdNUqj3nVSpf68piX+nR9NA28mNdHEVTAqOStgQf4iIUhDWlKt0iaOyH8Ai9/ZvrrRAT7AAAAAElFTkSuQmCC" InformativeScreenshot="d47be2b2aa8810c043587b9b0333dcfa.png" Reference="-jKMINgrYUS4ZtVTq7DnnA/l0zfGn73iUKAHMQf8FzoPA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Claim Summary' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
@@ -394,7 +394,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Delay_2">
+            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Delay_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>

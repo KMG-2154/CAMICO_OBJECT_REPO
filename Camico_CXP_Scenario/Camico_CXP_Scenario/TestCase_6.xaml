@@ -3,7 +3,7 @@
     <x:Property Name="in_scenario" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>684,2331</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>684,2367</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -113,7 +113,7 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="TestCase_6" sap:VirtualizedContainerService.HintSize="694,2266" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="TestCase_6" sap:VirtualizedContainerService.HintSize="694,2302" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="RowNumber" />
       <Variable x:TypeArguments="x:Int32" Name="CurrentIndex" />
@@ -126,7 +126,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Created a Config.xlsx with input data and test case descriptions." DisplayName="Read Range Workbook CONFIG " sap:VirtualizedContainerService.HintSize="632,94" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Add_Reserve">
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Created a Config.xlsx with input data and test case descriptions." DisplayName="Read Range Workbook CONFIG " sap:VirtualizedContainerService.HintSize="632,130" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Add_Reserve" WorkbookPath="Config.xlsx">
       <ui:ReadRange.DataTable>
         <OutArgument x:TypeArguments="sd:DataTable">
           <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">DT_RESERVE</CSharpReference>
@@ -134,16 +134,11 @@
       </ui:ReadRange.DataTable>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadRange.WorkbookPath>
-        <InArgument x:TypeArguments="x:String">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">Environment.GetFolderPath(Environment.SpecialFolder.Desktop)+"\\CAMICO CXP\\Config.xlsx"</CSharpValue>
-        </InArgument>
-      </ui:ReadRange.WorkbookPath>
     </ui:ReadRange>
     <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" sap2010:Annotation.AnnotationText="Adding data column for storing the claim number." ColumnName="Claim Number" DisplayName="Add Data Col CLAIM NUMBER" sap:VirtualizedContainerService.HintSize="632,94" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1">
       <ui:AddDataColumn.DataTable>
